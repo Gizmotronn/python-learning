@@ -6,3 +6,13 @@ My first code with Python:
 print("Hello, World!")
 ```
 
+## REPL
+
+The python interpreter
+
+* __R__eads the command you enter
+* __E__valuates and executes the command
+* __P__rints the output (if any) to the console
+* __L__oops back and repeats the process
+
+REPL is the most straightforward way to start talking to Python.
