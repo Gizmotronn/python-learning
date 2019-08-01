@@ -16,3 +16,13 @@ The python interpreter
 * __L__oops back and repeats the process
 
 REPL is the most straightforward way to start talking to Python.
+
+## Hello World
+
+This is what hello, world looks like with Python:
+
+```python
+>>> print("Hello, World!")
+Hello, World!
+```
+
