@@ -52,3 +52,13 @@ An easier way to run a script is to use a text/code editor, also known as an IDE
 * Microsoft Visual Studio
 * IDLE (made for Python)
 
+IDEs often have features that help with writing code:
+
+* __Syntax  Highlighting__ - IDEs colorize different parts of the code to make it easier to read
+* __Code Completion__ - IDES can complete some parts of code, for example "pr" can be turned into "print" using the tab function on IDES
+* __Debuggers__
+
+IDLE (for Python) - ID__Learning__E
+
+IDLE can be used like the Python cmd prompt
+
