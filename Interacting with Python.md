@@ -34,5 +34,21 @@ To exit from the editor:
 exit()
 ```
 
+## Python scripts
 
+When I create long chains of Python code, I should save them as a script, or a code file. It is a reusable file. Once the file is saved, I can open the Python window and paste in the directory to that file, for example
+
+```
+C:\Users\arbuc\documents\github\learning-python\helloworld.py
+```
+
+Python will then run the code.
+
+
+
+An easier way to run a script is to use a text/code editor:
+
+* Pycharm (jetbrains, freemium) (made for Python)
+* Microsoft Visual Studio
+* IDLE (made for Python)
 
