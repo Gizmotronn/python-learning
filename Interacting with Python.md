@@ -26,3 +26,13 @@ This is what hello, world looks like with Python:
 Hello, World!
 ```
 
+## Python Editor
+
+To exit from the editor:
+
+```python
+exit()
+```
+
+
+
