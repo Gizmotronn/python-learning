@@ -46,7 +46,7 @@ Python will then run the code.
 
 
 
-An easier way to run a script is to use a text/code editor:
+An easier way to run a script is to use a text/code editor, also known as an IDE (Integrated Development Environment):
 
 * Pycharm (jetbrains, freemium) (made for Python)
 * Microsoft Visual Studio
