@@ -22,7 +22,8 @@ print(5*5)
 Printing an integer: 
 
 ```python
-print
+print(123123123)
+>>> #prints 123123123
 ```
 
 
