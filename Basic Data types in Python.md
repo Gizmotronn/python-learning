@@ -15,5 +15,7 @@ print(5*5)
 # prints 25 to the console
 ```
 
+## Integers
+
 
 
