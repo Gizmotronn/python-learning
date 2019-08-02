@@ -17,5 +17,5 @@ print(5*5)
 
 ## Integers
 
-* There is no limit to how long an integer is in Python 3 
+* There is no limit to how long an integer is in Python 3
 
