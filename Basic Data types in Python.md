@@ -11,6 +11,10 @@ print("Hello, World!")
 The print function can also print an output, or calculation:
 
 ```python
-
+print(5*5)
+# prints 25 to the console
 ```
 
+
+
+```
