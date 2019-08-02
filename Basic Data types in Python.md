@@ -33,3 +33,5 @@ If there is no prefix before the sequence of numbers, Python interprets this as 
 * 0b = Binary = Base 2
 * 0o = Octal = Base 8
 * 0x = Hexadecimal = Base 16
+
+Let's put these integer prefixes into work:
