@@ -30,3 +30,5 @@ If there is no prefix before the sequence of numbers, Python interprets this as 
 
 ### Integer Prefixes
 
+* 0b = Binary = Base 2
+* 
