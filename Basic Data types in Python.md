@@ -1,3 +1,3 @@
 # Basic Data types in Python
 
-One of the great things about Py
+One of the great things about Python 
