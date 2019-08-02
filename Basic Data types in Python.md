@@ -37,6 +37,13 @@ If there is no prefix before the sequence of numbers, Python interprets this as 
 Let's put these integer prefixes into work:
 
 ```python
+>>> print(0o10)
+#prints 8
 
+>>> print(0x10)
+#prints 16
+
+>>> print(0b10)
+#prints 2
 ```
 
