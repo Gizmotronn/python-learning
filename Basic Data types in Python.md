@@ -47,3 +47,4 @@ Let's put these integer prefixes into work:
 #prints 2
 ```
 
+* int is short for integer
