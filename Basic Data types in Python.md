@@ -1,3 +1,3 @@
 # Basic Data types in Python
 
-One of the great things about Python is that there are few keywords 
+One of the great things about Python is that there are few keywords built into Python 
