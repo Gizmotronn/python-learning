@@ -19,5 +19,5 @@ print(5*5)
 
 * There is no limit to how long an integer is in Python 3
 
-Printing an
+Printing an integer: 
 
