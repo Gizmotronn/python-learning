@@ -45,3 +45,4 @@ mystring = "hello"
 print(mystring)
 ```
 
+If double quotes are used, apostrophes can be used
