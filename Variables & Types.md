@@ -22,5 +22,10 @@ Defining a floating point number:
 ```python
 myfloat = 7.0
 print(myfloat)
+
+#or
+
+myfloat = float(7)
+print(myfloat)
 ```
 
