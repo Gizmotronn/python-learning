@@ -6,3 +6,4 @@
 
 ## Number Variables
 
+* Python supports 2 types of numbers:
