@@ -17,3 +17,4 @@ myint = 77
 print(myint)
 ```
 
+Defining a floating point number:
