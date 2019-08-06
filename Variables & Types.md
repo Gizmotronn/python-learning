@@ -20,6 +20,7 @@ print(myint)
 Defining a floating point number:
 
 ```python
-
+myfloat = 7.0
+print(myfloat)
 ```
 
