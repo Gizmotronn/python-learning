@@ -9,4 +9,5 @@
 * Python supports 2 types of numbers:
   * Floating point
   * Integer
-* 
+
+Defining an integer can be done like this:
