@@ -11,3 +11,8 @@
   * Integer
 
 Defining an integer can be done like this:
+
+```python
+
+```
+
