@@ -13,6 +13,7 @@
 Defining an integer can be done like this:
 
 ```python
-
+myint = 77
+print(myint)
 ```
 
