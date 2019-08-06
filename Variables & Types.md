@@ -29,3 +29,6 @@ myfloat = float(7)
 print(myfloat)
 ```
 
+## Text - Strings
+
+Strings are defined with single quotes:
