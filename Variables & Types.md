@@ -32,3 +32,16 @@ print(myfloat)
 ## Text - Strings
 
 Strings are defined with single quotes:
+
+```python
+mystring = 'hello'
+print(mystring)
+```
+
+Or double quotes:
+
+```python
+mystring = "hello"
+print(mystring)
+```
+
