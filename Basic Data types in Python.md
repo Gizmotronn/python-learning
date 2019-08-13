@@ -65,3 +65,30 @@ if myint == 7: #this line checks to see if the variable does indeed equal 7
 ```
 
 >>>>>>> Stashed changes
+
+## Strings
+
+* Defined either with single quotes or double quotes
+* However, double quotes are better because apostrophes ('') can be used
+
+```python
+string 1 = "This is Liam's String"
+string 2 = 'This is Liam's String'
+# as you can see, "string 2" does not work
+```
+
+You can print strings in two ways:
+
+```python
+# option 1 (printing a string directly)
+print("This is a string")
+>> #Output: This is a string
+
+# option 2 (defining a string variable)
+string = "This is a string"
+print(string)
+>> #Output: This is
+```
+
+
+
