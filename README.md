@@ -1,4 +1,6 @@
 # python-learning
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
 Learning about python and other languages:
 
 * C++ (Arduino)
