@@ -47,4 +47,21 @@ Let's put these integer prefixes into work:
 #prints 2
 ```
 
+<<<<<<< Updated upstream
 * int is short for integer
+=======
+* int is short for integer
+
+
+
+### Integer If Statements
+
+Seen in root\variablesnumbers.py:
+
+```python
+myint = 7 # myint is an integer variable that is predefined, it is set to the value of 7
+if myint == 7: #this line checks to see if the variable does indeed equal 7
+    print(myint) #if it does, the console prints myint - the value of mmyint, if it was print("myint") the console would print "myint" rather than its value    
+```
+
+>>>>>>> Stashed changes
