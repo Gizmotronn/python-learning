@@ -3,3 +3,8 @@
 # This is the first thing that would be written when you are learning Python
 
 print("Hello World")
+
+x = 1
+if x == 1:
+    print("Hello World")
+    print(x)
