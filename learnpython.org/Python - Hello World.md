@@ -9,6 +9,6 @@ A string can be written in Python like this:
 
 ```python
 print("Hello World")
-
+# This would print out "Hello World" to the console, without the quotation marks
 ```
 
