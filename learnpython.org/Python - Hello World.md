@@ -2,4 +2,4 @@
 
 *From LearnPython.org*
 
-* Python en
+* The "print" directive 
