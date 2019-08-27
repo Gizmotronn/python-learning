@@ -8,6 +8,7 @@
 A string can be written in Python like this:
 
 ```python
-print("")
+print("Hello World")
+
 ```
 
