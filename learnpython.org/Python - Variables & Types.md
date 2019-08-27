@@ -24,5 +24,7 @@ print(myint) # this prints the value of "myint", in this case 7
 
 ### Floating point number
 
-* 
+* Floating point number - number with decimal point
+
+**Can be a whole number!**
 
