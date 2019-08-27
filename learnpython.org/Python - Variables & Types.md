@@ -28,3 +28,12 @@ print(myint) # this prints the value of "myint", in this case 7
 
 **Can be a whole number!**
 
+```python
+myfloat = 7.0
+print(myfloat)
+myfloat = float(7)
+print(myfloat)
+```
+
+
+
