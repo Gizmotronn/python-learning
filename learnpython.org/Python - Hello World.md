@@ -8,6 +8,6 @@
 A string can be written in Python like this:
 
 ```python
-
+pri
 ```
 
