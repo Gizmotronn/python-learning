@@ -2,4 +2,4 @@
 
 *From LearnPython.org*
 
-* The "print" directive 
+* The "print" directive prints out
