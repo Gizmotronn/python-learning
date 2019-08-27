@@ -23,7 +23,7 @@ a, b = 3, 4 #this is 2 variables being set/defined at once
 print(a,b) #this prints 34
 
 # This does not work
-hello = hello
+hello = "hello"
 myint = 7
 myint2 = 8
 print(myint + myint2 + hello) #this would return an error
