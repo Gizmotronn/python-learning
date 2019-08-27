@@ -18,6 +18,30 @@ string1 = "This is a string"
 string2 = "that is half-complete"
 print(string1 + string2) #prints the value of "string1" & "string2", in this case "This is a string""that is half-complete". Note that there is no space between string1 and string2
 
+# Assignments
+a, b = 3, 4 #this is 2 variables being set/defined at once
+print(a,b) #this prints 34
+
+# This does not work
+hello = hello
+myint = 7
+myint2 = 8
+print(myint + myint2 + hello) #this would return an error
+
+# LearnPython.org Exercise for Variables & Types
+# change this code
+mystring = None
+myfloat = None
+myint = None
+
+# testing code
+if mystring == "hello":
+    print("String: %s" % mystring)
+if isinstance(myfloat, float) and myfloat == 10.0:
+    print("Float: %f" % myfloat)
+if isinstance(myint, int) and myint == 20:
+    print("Integer: %d" % myint)
+
 # in terms of line 8, you can either do line 8 or line 6 to declare a floating point variable
 
 # Running this file (also see "running python" in the root directory)
