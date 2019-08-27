@@ -11,3 +11,14 @@ https://www.learnpython.org/en/Variables_and_Types
 
 ## Types of Variables - Numbers
 
+* Integer - whole number
+
+An example of setting up an integer and printing it:
+
+```python
+myint = 7 # this sets the value of "myint" to 7
+print(myint) # this prints the value of "myint", in this case
+```
+
+
+
