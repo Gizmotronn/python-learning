@@ -11,6 +11,8 @@ https://www.learnpython.org/en/Variables_and_Types
 
 ## Types of Variables - Numbers
 
+
+
 * Integer - whole number
 
 An example of setting up an integer and printing it:
