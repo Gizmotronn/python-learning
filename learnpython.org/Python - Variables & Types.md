@@ -37,3 +37,5 @@ print(myfloat)
 
 
 
+### Strings
+
