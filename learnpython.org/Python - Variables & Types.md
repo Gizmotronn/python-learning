@@ -39,3 +39,24 @@ print(myfloat)
 
 ### Strings
 
+* Defined with either double or single quotation marks ('' or "")
+* It is better to use "" as you can then use apostrophes in the string
+
+```python
+# Example of String variable in Python
+mystring = "This is a string"
+print(mystring) # prints the variable of "mystring"
+```
+
+### Operators
+
+* Operators (+, -, *, /) can be used
+
+Example:
+
+```python
+string1 = "This is a string"
+string2 = "that is half-complete"
+print(string1 + string2) #prints the value of "string1" & "string2", in this case "This is a string""that is half-complete". Note that there is no space between string1 and string2
+```
+
