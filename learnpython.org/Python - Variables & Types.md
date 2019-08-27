@@ -11,7 +11,7 @@ https://www.learnpython.org/en/Variables_and_Types
 
 ## Types of Variables - Numbers
 
-
+### Int
 
 * Integer - whole number
 
