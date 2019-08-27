@@ -14,4 +14,4 @@ print("Hello World")
 # This would print out "Hello World" to the console, without the quotation marks
 ```
 
-The exercise can also be seen in Github/IrisDroidology/Python-Learning, go to
+The exercise can also be seen in Github/IrisDroidology/Python-Learning, go to the Master Branch, then LearnPython.org, then HelloWorld!.py
