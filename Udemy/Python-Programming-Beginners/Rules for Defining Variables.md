@@ -14,3 +14,9 @@ _1 = "correct name" #This is also a correct name for a variable
 ```
 
 * Variables are case-sensitive
+* Reserved names cannot be variable names
+
+## Reserved names
+
+* print 
+* Inbuilt function in Python with a specific purpose
