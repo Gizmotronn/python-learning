@@ -20,3 +20,9 @@ _1 = "correct name" #This is also a correct name for a variable
 
 * print 
 * Inbuilt function in Python with a specific purpose
+
+
+
+## Special characters
+
+* The only special character that can be used in a variable name is the underscore (_)
