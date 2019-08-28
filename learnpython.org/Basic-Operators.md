@@ -38,3 +38,13 @@ cubed = 7 ** 3 # sets the value of "cubed" (an integer/float variable) to the va
 print(cubed + squared) # prints the value of cubed added to the value of squared
 ```
 
+# Operators & strings
+
+* Python supports ***concatenating*** strings using the ***addition*** operator:
+
+```python
+helloworld = "hello " + "world" #sets the value of the string variable "helloworld" to "hello + world" = "hello world"
+
+print(helloworld) # prints the value of "helloworld", in this case hello world
+```
+
