@@ -13,3 +13,20 @@ print(number) # prints the value of the variable "number", in this case 3
 # note: all the code on these documentation files are also put into Python files in the same folder
 ```
 
+* There are many different operators:
+
+## Types of Operators
+
+* +. Addition
+* -. Subtraction
+* *. Multiplication
+* /. Division
+* %. Modulus - returns the remainder of a division
+
+Modulus example:
+
+```python
+remainder = 11 % 3 # sets the value of the variable "remainder" to the remainder of 11 divided by 3
+print(remainder)
+```
+
