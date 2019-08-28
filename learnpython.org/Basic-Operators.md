@@ -3,3 +3,13 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 * Just as with other programming languages, basic operators (+, -, /, *) can be used in Python
+
+An example of using operators in integer variables;
+
+```python
+number = 1 + 2 # sets the value of the int variable "number" to 3
+print(number) # prints the value of the variable "number", in this case 3
+
+# note: all the code on these documentation files are also put into Python files in the same folder
+```
+

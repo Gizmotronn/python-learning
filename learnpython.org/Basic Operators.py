@@ -2,4 +2,4 @@
 
 # Examples of operators
 number = 1 + 2 # sets the value of number to 3 (1 + 2) - integer variable
-print(number) # prints the value of the variable number
+print(number) # prints the value of the variable number, in this case 3
