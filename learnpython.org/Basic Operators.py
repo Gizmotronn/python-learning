@@ -20,5 +20,9 @@ cubed = 7 ** 3 # sets the value of "cubed" (an integer/float variable) to the va
 print(cubed + squared) # prints the value of cubed added to the value of squared
 
 # Operators & Strings
+# addition and strings
 helloworld = "hello " + "world" #sets the value of the string variable "helloworld" to "hello + world" = "hello world"
 print(helloworld) # prints the value of "helloworld", in this case hello world
+# multiplication abd strings
+lotsofstring = "string" * 10 # sets the value of "lotsofstring" to 10xstring
+print(lotsofstring) # prints string x10 

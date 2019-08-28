@@ -48,3 +48,10 @@ helloworld = "hello " + "world" #sets the value of the string variable "hellowor
 print(helloworld) # prints the value of "helloworld", in this case hello world
 ```
 
+* You can also use the multiplication operator with strings:
+
+```python
+lotsofstring = "string" * 10 # sets the value of "lotsofstring" to 10xstring
+print(lotsofstring) # prints string x10
+```
+
