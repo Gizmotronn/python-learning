@@ -26,3 +26,9 @@ print(helloworld) # prints the value of "helloworld", in this case hello world
 # multiplication abd strings
 lotsofstring = "string" * 10 # sets the value of "lotsofstring" to 10xstring
 print(lotsofstring) # prints string x10 
+
+# Operators can be used with lists
+even_numbers = [2,4,6,8]
+odd_numbers = [1,3,5,7]
+all_numbers = odd_numbers + even_numbers
+print(all_numbers)

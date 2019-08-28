@@ -38,7 +38,7 @@ cubed = 7 ** 3 # sets the value of "cubed" (an integer/float variable) to the va
 print(cubed + squared) # prints the value of cubed added to the value of squared
 ```
 
-# Operators & strings
+## Operators & strings
 
 * Python supports ***concatenating*** strings using the ***addition*** operator:
 
@@ -53,5 +53,16 @@ print(helloworld) # prints the value of "helloworld", in this case hello world
 ```python
 lotsofstring = "string" * 10 # sets the value of "lotsofstring" to 10xstring
 print(lotsofstring) # prints string x10
+```
+
+## Operators & Lists
+
+Operators can be used with lists:
+
+```python
+even_numbers = [2,4,6,8]
+odd_numbers = [1,3,5,7]
+all_numbers = odd_numbers + even_numbers
+print(all_numbers)
 ```
 
