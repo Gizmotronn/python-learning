@@ -13,3 +13,4 @@ _1 = "correct name" #This is also a correct name for a variable
 1n = "incorrect variable name" #This creates a syntax error
 ```
 
+* Variables are case-sensitive
