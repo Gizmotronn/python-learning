@@ -39,6 +39,19 @@ print(totalScore) # prints the value of the variable "totalScore", in this case 
 
 
     #Arithmetic Operators
-2 + 2 # The addition sign (+) is the arithmetic operator in this function, the result of this function is "4"    
+# Addition
+#     
+2 + 2 # The addition sign (+) is the arithmetic operator in this function, the result of this function is "4"
+
+# Division
+
+10/5 # This prints "2.0", which is a floating point number
+    # to print the division as an integer,
+10//5 # This prints "2"   
+
+# Modulus
+10%3 # This prints the remainder of 10 divided by 3, which is 1
+
+
 
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
