@@ -54,4 +54,20 @@ print(totalScore) # prints the value of the variable "totalScore", in this case 
 
 
 
+# Relational Operators
+
+    # Less than (<) & less than or equal to (<=)
+lowNumber = 5
+bigNumber = 6
+if 5 < 6
+    print("lowNumber is smaller than bigNumber ")    
+
+    # Greater than (>) & greater than or equal to (>=)
+    # Basically same as lines 60-63
+
+    # Double Equal (==)
+5 == 5 # The double equals sign is used to differentiate from an assignment operator
+
+    # Not equal to (!=)
+
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
