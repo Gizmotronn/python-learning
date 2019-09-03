@@ -20,3 +20,12 @@ print(floatingNumber) # typecasting ignores the floating part
 # output is 20, as only the integer part of 20.75 is retained
 
 # from https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727836#overview 
+
+# Questions
+    # Easy
+myInt = 25
+
+    # Hard
+myFloat = 25.77
+myFloat  = int(myFloat)    
+print(myFloat)
