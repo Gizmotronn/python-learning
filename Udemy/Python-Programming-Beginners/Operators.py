@@ -33,9 +33,12 @@ myModulus = 5 % 2 # sets the value of the variable "myModulus" to the remainder 
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727840#overview
 
 # Different Types of Operators
+    # Assignment Operator
+totalScore = 60 # sets the value of the variable "totalScore" to an integer value of 60
+print(totalScore) # prints the value of the variable "totalScore", in this case 60
 
 
-
-
+    #Arithmetic Operators
+2 + 2 # The addition sign (+) is the arithmetic operator in this function, the result of this function is "4"    
 
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
