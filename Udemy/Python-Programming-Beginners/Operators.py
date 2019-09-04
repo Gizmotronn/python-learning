@@ -55,7 +55,7 @@ print(totalScore) # prints the value of the variable "totalScore", in this case 
 
 
 # Relational Operators
-    # Returns BOOLEAN values - TRUE or FALSE
+    # Returns BOOLEAN values - TRUE or FALSE 
     # Less than (<) & less than or equal to (<=)
 lowNumber = 5
 bigNumber = 6
@@ -89,5 +89,13 @@ if 5>4 and 4>3
     # "Not" Operator
     # Opposite output
 not 2<5 # This returns "true" via the console because  2 is not greater than 5    
+
+# Exercise Problems
+addTwo = 2 + 2
+
+2 + 3 * 4 # Using BIMMDAS, I get the value of 14, which is correct
+
+5>3 and 3>0
+
 
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
