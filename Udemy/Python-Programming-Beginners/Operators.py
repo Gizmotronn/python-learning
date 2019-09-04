@@ -70,4 +70,20 @@ if 5 < 6
 
     # Not equal to (!=)
 
+# Logical Operators 
+    # "And" operator
+    # Both statements have to be true 
+
+5>10 and 5<10 # The console returns "false" as one of these statements is false
+5>4 and 4>3 # The console returns "true" as both statements are true
+
+if 5>4 and 4>3
+    print("These statements are true") # Requires both statements to be true to print the command to the console. As both statements are true, the command would be printed
+
+    # "Or" Operator
+    # One or both operators has to be true
+
+5>10 or 5<10 # The console returns "true" as one of these statements is true
+5<10 or 10>5 # Thre console returns "true" as one or more (2) of these  statements is true
+
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
