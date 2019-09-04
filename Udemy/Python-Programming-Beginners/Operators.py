@@ -55,7 +55,7 @@ print(totalScore) # prints the value of the variable "totalScore", in this case 
 
 
 # Relational Operators
-
+    # Returns BOOLEAN values - TRUE or FALSE
     # Less than (<) & less than or equal to (<=)
 lowNumber = 5
 bigNumber = 6
@@ -85,5 +85,9 @@ if 5>4 and 4>3
 
 5>10 or 5<10 # The console returns "true" as one of these statements is true
 5<10 or 10>5 # Thre console returns "true" as one or more (2) of these  statements is true
+
+    # "Not" Operator
+    # Opposite output
+not 2<5 # This returns "true" via the console because  2 is not greater than 5    
 
 # From https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727842#overview
