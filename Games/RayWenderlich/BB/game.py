@@ -1,3 +1,5 @@
+!#/usr/bin/python3
+
 # 1 - Import library
 import pygame # Importing the pygame library
 from pygame.locals import *
