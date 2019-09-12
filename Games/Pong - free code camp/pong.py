@@ -4,8 +4,14 @@
 
 import turtle # module that lets you do basic graphics in Python
 
-wn.title = turtle.Screen()
-wn.title("Pong by ACORD")
-wn.bgcolor("black")
-wn.setup(width=800, height=600)
-wn
+wn = turtle.Screen() # creates a variable called "wn" that is the game windows
+wn.title("Pong by ACORD") # sets the title that would appear on the window
+wn.bgcolor("black") # sets the game window bg color
+wn.setup(width=800, height=600) # sets the game window size
+wn.tracer(0) # stops the window from updating
+
+
+
+# Main Game Loop
+while True:
+    wn.update() # every time the loop runs, it updates the screen
