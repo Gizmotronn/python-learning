@@ -4,8 +4,8 @@
 
 import turtle # module that lets you do basic graphics in Python
 
-gamewindow = turtle.Screen()
-gamewindow.title("Pong by ACORD")
-gamewindow.bgcolor("black")
-gamewindow.setup(width=800, height=600)
-w
+wn.title = turtle.Screen()
+wn.title("Pong by ACORD")
+wn.bgcolor("black")
+wn.setup(width=800, height=600)
+wn
