@@ -20,7 +20,7 @@ WINDOWHEIGHT = 300
 def main(): # declaring the function - main function
     pygame.init() # initialising pygame
     global DISPLAYSURF # Creates the main surface that will be used throughout the program. Pygame draws objects onto surfaces
-    FPSCLOCK = pygame.time.Clock() # We set the frame rate (see line 10) ourselves. This line allows the FPS to be set to that value (200) rather than the computer setting it as fast as it wants
+    FPSCLOCK = pygame.time.Clock() # We set the frame rate (see line 12) ourselves. This line allows the FPS to be set to that value (200) rather than the computer setting it as fast as it wants
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT)) # uses the values from "WINDOWHEIGHT" & "WINDOWWIDTH" - see lines 14, 15 (300px, 400px repsectively)
     pygame.display.set_caption("Stellarios/Pong by ACORD") # sets the window title/caption
     while True # Main game loop - every game needs one
@@ -28,3 +28,7 @@ def main(): # declaring the function - main function
             if event.type  == QUIT: # if the event that is undertaken is "QUIT"
                 pygame.quit() # then this script runs, closes pygame
                 sys.exit() # and sys exits as well
+        pygame.display.update() # Asks the screen to update
+        FPSCLOCK.tick(FPS) # sets the value of the FPS (frames per second) variable to the value "FPS" seen in Line 12        
+
+    
