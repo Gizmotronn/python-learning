@@ -8,3 +8,8 @@ FPS = 200 # Change this value to slow down/speed up game
 # Game window
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 300
+
+# Writing the main function of the Pong program
+def main(): # declaring the function - main function
+    pygame.init() # initialising pygame
+    global DISPLAYSURF # Creates the main surface that will be used throughout the program. Pygame draws objects onto surfaces
