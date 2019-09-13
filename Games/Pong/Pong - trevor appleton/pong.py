@@ -1,3 +1,5 @@
+# From http://trevorappleton.blogspot.com/2014/04/writing-pong-using-python-and-pygame.html
+
 import pygame, sys # import pygame libraries into program, so we can access them. Also importing the sys libaries which are used to exit the game
 from pygame.locals import *
 
@@ -22,3 +24,7 @@ def main(): # declaring the function - main function
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT)) # uses the values from "WINDOWHEIGHT" & "WINDOWWIDTH" - see lines 14, 15 (300px, 400px repsectively)
     pygame.display.set_caption("Stellarios/Pong by ACORD") # sets the window title/caption
     while True # Main game loop - every game needs one
+        for event in pygame.event.get() # Exit/quit game function using pygame library
+            if event.type  == QUIT:
+                pygame.quit()
+                sys.exit()
