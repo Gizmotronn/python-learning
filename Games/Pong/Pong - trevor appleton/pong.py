@@ -25,6 +25,6 @@ def main(): # declaring the function - main function
     pygame.display.set_caption("Stellarios/Pong by ACORD") # sets the window title/caption
     while True # Main game loop - every game needs one
         for event in pygame.event.get() # Exit/quit game function using pygame library
-            if event.type  == QUIT:
-                pygame.quit()
-                sys.exit()
+            if event.type  == QUIT: # if the event that is undertaken is "QUIT"
+                pygame.quit() # then this script runs, closes pygame
+                sys.exit() # and sys exits as well
