@@ -30,5 +30,6 @@ def main(): # declaring the function - main function
                 sys.exit() # and sys exits as well
         pygame.display.update() # Asks the screen to update
         FPSCLOCK.tick(FPS) # sets the value of the FPS (frames per second) variable to the value "FPS" seen in Line 12        
-
+if __name__=='__main__' # calling in the main function
+    main() 
     
