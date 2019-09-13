@@ -1,6 +1,11 @@
 import pygame, sys # import pygame libraries into program, so we can access them. Also importing the sys libaries which are used to exit the game
 from pygame.locals import *
 
+""" Misc comments that don't fit
+Line 19 - "global DISPLAYSURF" - # Creates the main surface that will be used throughout the program. Pygame draws objects onto surfaces. 
+            We make the variable "global" so it can be edited/modified later throughout the program
+"""
+
 # Controlling the speed (FPS) of the program
 FPS = 200 # Change this value to slow down/speed up game
 
