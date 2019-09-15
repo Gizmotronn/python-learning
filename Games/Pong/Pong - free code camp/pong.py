@@ -21,7 +21,13 @@ paddle_a.goto(-350, 0) # Sets the initial coordinates for the Paddle_A
 
 
 # Paddle B
-
+paddle_b = turtle.Turtle() # creates a game object. "turtle" = module, Turtle = class
+paddle_b.speed(0) # Speed of animation - maximum possible speed
+paddle_b.shape("square") # default - 20px*20px
+paddle_b.color("white")
+paddle_b.shapesize(stretch_wid=5, stretch_len=1) # Stretches the width and length of "paddle_a"
+paddle_b.penup()
+paddle_b.goto(350, 0) # Sets the initial coordinates for the Paddle_A
 
 # Ball
 
