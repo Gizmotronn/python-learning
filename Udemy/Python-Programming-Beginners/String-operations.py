@@ -19,3 +19,13 @@ len(string) # prints how many index numbers/characters are in the string (13 let
 # Exercise problems for String Operations from udemy
 # https://www.udemy.com/course/python-programming-beginners/learn/lecture/6727864?start=0#overview
 
+# Easy - write a program to create a string “Python programming is easy”
+string = "Python programming is easy"
+
+# Medium - Now slice the first string and store “easy” in the second string
+sliced = string[22:26]
+print(sliced)
+
+# Hard - Replace “easy” in the second string with “ and powerful” and concatenate both the strings
+replaced = sliced.replace("easy", " and powerful")
+slicedText = slicedText.replace('easy',' and powerful')
