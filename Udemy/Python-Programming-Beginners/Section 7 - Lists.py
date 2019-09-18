@@ -30,3 +30,15 @@ listName.reverse # Reverses the order of the list "listName"
 
 # Pop Operation
 listName.pop() # Removes the last object in the list "listName" and prints it to the console
+
+# Exercises
+
+# Easy - Write a program to create a list of 5 elements
+myList = ["This", "list", "contains", "five", "elements"]
+
+# Medium - Update the value at 3rd element of the list
+myList[3] = "does contain"
+
+# Hard - Create another list of 3 elements. Now create a final result as a concatenation of the first two lists
+myListTwo = ["3", "elements", "are here"]
+myListTogether = myListTwo + myList
