@@ -11,3 +11,22 @@ listName[1] # prints the second object in the list "listName", in this case "obj
 listName[1] = "object7" # Replaces the value of the second value in list "listName" with "object7"
 listName # Prints the values assigned to the list "listName" to the console
 
+# List Operations
+
+# Append operation - add an object to the end of the list
+listName.append("object99") # Adds "object99" to the end of the list "listName"
+
+# Insert operation
+listName.insert(1, "object66") # Addes "object66" to the index value of 1 (2 overall object) to the list "listName"
+
+# Remove Operation
+listName.remove("object99") # Removes the object "object99" from the list "listName"
+
+# Sort Operation
+listName.sort() # Arranges the list "listName" in alphabetical order
+
+# Reverse Operation
+listName.reverse # Reverses the order of the list "listName"
+
+# Pop Operation
+listName.pop() # Removes the last object in the list "listName" and prints it to the console
