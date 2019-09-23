@@ -42,3 +42,4 @@ myList[3] = "does contain"
 # Hard - Create another list of 3 elements. Now create a final result as a concatenation of the first two lists
 myListTwo = ["3", "elements", "are here"]
 myListTogether = myListTwo + myList
+
