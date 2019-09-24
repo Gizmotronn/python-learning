@@ -45,3 +45,21 @@ myListTogether = myListTwo + myList
 
 # Practice - 23.9.19 +
 mylist = ["This", "object"]
+
+# Easy - Write a program to create a list of 5 elements
+myList = ["1", "2", "3", "4", "5"]
+# Medium - Update the value at 3rd element of the list
+mylist[2] = "55" # index values
+# Hard - Create another list of 3 elements. Now create a final result as a concatenation of the first two lists
+myList2222 = ["38", "44", "555"]
+myListTogether2 = myList2222 + myList
+
+# List Operations
+# Pop - remove last value from list
+# Insert - using index values, moves everything behind it back by 1 (in terms of index values)
+# Reverse - reverse order (index values)
+# Sort - alphabetical order (changed index values)
+# Append - add item to end of list
+
+# To insert operation: 
+listName.operation (i.e. listName.append(55))
