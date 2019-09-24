@@ -37,6 +37,41 @@ ball.color("white")
 ball.penup()
 ball.goto(0, 0) # Sets the initial coordinates for the Paddle_A
 
+# Functions
+def paddle_a_up(): # Defining the function
+    y = paddle_a.ycor() # sets the y value to the current y-coord value of the object "paddle_a"
+    y += 20
+    paddle_a.sety(y)
+
+def paddle_a_down(): # Defining the function
+    y = paddle_a.ycor() # sets the y value to the current y-coord value of the object "paddle_a"
+    y -= 20
+    paddle_a.sety(y)    
+
+def paddle_b_up(): # Defining the function
+    y = paddle_a.ycor() # sets the y value to the current y-coord value of the object "paddle_a"
+    y += 20
+    paddle_a.sety(y)
+
+def paddle_b_down(): # Defining the function
+    y = paddle_a.ycor() # sets the y value to the current y-coord value of the object "paddle_a"
+    y -= 20
+    paddle_a.sety(y)        
+
+# Keyboard Binding
+wn.listen() # listen for keyboard input
+wn.onkeypress(paddle_a_up, "w")
+
+wn.listen() # listen for keyboard input
+wn.onkeypress(paddle_a_down, "s")
+
+wn.listen() # listen for keyboard input
+wn.onkeypress(paddle_b_up, "Up") # up arrow key
+
+wn.listen() # listen for keyboard input
+wn.onkeypress(paddle_b_down, "Down") # down arrow key
+
+
 # Main Game Loop
 while True:
     wn.update() # every time the loop runs, it updates the screen
