@@ -16,7 +16,7 @@ if variable1 < variable2:
 # Lecture Link: https://www.udemy.com/course/python-masterclass-for-beginners/learn/lecture/13270030#content
 
 # Set-up
-number1 = 1
+number1 = 1 # Try also using input for this, e.g as a guessing game
 number2 = 2
 number3 = 3
 
@@ -25,3 +25,16 @@ if number1 + number2 == number3:
     print("Correct numbers")
 elif number1 + number2 != number3:
     print("Try again")    
+
+# Conditionals - Else (Lecture 19)
+# Lecture Link - https://www.udemy.com/course/python-masterclass-for-beginners/learn/lecture/13270032#overview
+
+# Set-up
+var1 = 1
+var2 = 2
+
+# else conditional statements
+if var1 = 1:
+    print("var1 = " + var1)
+else:
+    print("Wrong number")
