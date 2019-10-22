@@ -16,8 +16,8 @@ FPS = 200
 
 # Global Variables
     # Window Size
+WINDOWWIDTH = 400    
 WINDOWHEIGHT = 300
-WINDOWWIDTH = 400
 
 # Main Function
 def main():
@@ -25,5 +25,5 @@ def main():
     global DISPLAYSURF
 
     FPSCLOCK = pygame.time.Clock()
-    DISPLAYSURF = pygame.display.set_mode((WINDOWHEIGHT,WINDOWWIDTH))
-    pygame.display.set_caption('Pong by ACORD')
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT)) # set the size of the display, or window, to the values set in "WINDOWHEIGHT", "WINDOWWIDTH"
+    pygame.display.set_caption('Pong by ACORD') # Setting the caption, or title, of the window
