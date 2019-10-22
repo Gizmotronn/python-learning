@@ -27,3 +27,15 @@ def main():
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT)) # set the size of the display, or window, to the values set in "WINDOWHEIGHT", "WINDOWWIDTH"
     pygame.display.set_caption('Pong by ACORD') # Setting the caption, or title, of the window
+
+    while true: # main game loop
+        for event in pygame.event.get():
+            if event.type == QUIT: # set what happens if the "quit" event is triggered
+                pygame.quit()
+                sys.exit()
+
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)
+
+if __name__=='__main__':
+    main()                
