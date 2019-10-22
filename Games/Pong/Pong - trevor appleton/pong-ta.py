@@ -14,6 +14,16 @@ from pygame.locals import *
 # Number of Frames/Second
 FPS = 200
 
+# Global Variables
+    # Window Size
+WINDOWHEIGHT = 300
+WINDOWWIDTH = 400
+
 # Main Function
 def main():
     pygame.init # Initialize pygame
+    global DISPLAYSURF
+
+    FPSCLOCK = pygame.time.Clock()
+    DISPLAYSURF = pygame.display.set_mode((WINDOWHEIGHT,WINDOWWIDTH))
+    pygame.display.set_caption('Pong by ACORD')
