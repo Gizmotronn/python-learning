@@ -45,7 +45,7 @@ def drawArena(): # defines the function name, empty brackets = nothing passed in
 # Main Function
 def main():
     pygame.init # Initialize pygame
-    global DISPLAYSURF # display surfac
+    global DISPLAYSURF # display surface
 
     FPSCLOCK = pygame.time.Clock() # this means that the clock will run at the value that we set in the variable FPS (see line 43)
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT)) # set the size of the display, or window, to the values set in "WINDOWHEIGHT", "WINDOWWIDTH"
@@ -80,7 +80,7 @@ def main():
         drawArena() # arena remains the same throughout the game
         drawPaddle(paddle1)
         drawPaddle(paddle2)
-        drawBall(ball)            
+        drawBall(ball)       
 
         pygame.display.update() # asking the screen to update (for example if something is drawn it won't? show unless the screen is updated)
         FPSCLOCK.tick(FPS) # see line 39
