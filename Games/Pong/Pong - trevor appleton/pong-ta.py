@@ -14,7 +14,7 @@ Import pygame - pygame libraries, for python applications. pygame draws directly
 import sys - sys libraries, used to exit the game
 import pygame, sys can be done on separate lines
 """
-from pygame.locals import *
+from pygame import pygame
 
 # Number of Frames/Second
 FPS = 200
