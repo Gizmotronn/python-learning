@@ -31,6 +31,17 @@ PADDLEOFFSET = 20 # how far the paddle is away from the edge of the screen
 BLACK     = (0  ,0  ,0  )
 WHITE     = (255   ,255   ,255   )
 
+# Drawing the game arena
+def drawArena(): # defines the function name, empty brackets = nothing passed into function
+    DISPLAYSURF.fill((0,0,0)) # fills the arena with the colour 0,0,0 (hex/rgb) - white
+    # Outline of Arena
+    pygame.draw.rect(DISPLAYSURF, WHITE, ((0,0)(WINDOWWIDTH,WINDOWHEIGHT)), LINETHICKNESS*2) # uses pygame to draw the arena with these instructions - white for the outlines based on the coords of WINDOWHEIGHT, WINDOWWIDTH
+    # Draw Centre Line
+    pygame.draw.rect(DISPLAYSURF, WHITE, ((WINDOWWIDTH/2),0),((WINDOWWIDTH/2),WINDOWHEIGHT), (LINETHICKNESS/4))
+
+# Drawing the Paddles
+#  
+
 # Main Function
 def main():
     pygame.init # Initialize pygame
@@ -52,11 +63,24 @@ def main():
     ball = pygame.Rect(ballX, ballY, LINETHICKNESS, LINETHICKNESS) # using pygame to draw a rectangle - the ball
     
 
+    # Drawing the Arena - also in time loop (while true)
+    drawArena() # arena remains the same throughout the game
+    drawPaddle(paddle1)
+    drawPaddle(paddle2)
+    drawBall(ball)
+
+
+
     while true: # main game loop. It keeps running until the game ends
         for event in pygame.event.get():
             if event.type == QUIT: # set what happens if the "quit" event is triggered
                 pygame.quit()
                 sys.exit()
+
+        drawArena() # arena remains the same throughout the game
+        drawPaddle(paddle1)
+        drawPaddle(paddle2)
+        drawBall(ball)            
 
         pygame.display.update() # asking the screen to update (for example if something is drawn it won't? show unless the screen is updated)
         FPSCLOCK.tick(FPS) # see line 39
