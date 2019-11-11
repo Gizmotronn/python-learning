@@ -114,3 +114,6 @@ string = "This is a string"
 print(string)
 >> #Output: This is
 ```
+
+# Python & Web
+https://docs.python.org/2/howto/webservers.html
