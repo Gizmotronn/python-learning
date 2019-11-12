@@ -1,7 +1,3 @@
-"""
-    if pydainput == "exit":
-        break
-"""
 import wikipedia
 import wx
 import wolframalpha
