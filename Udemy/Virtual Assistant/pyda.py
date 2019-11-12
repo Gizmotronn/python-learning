@@ -33,6 +33,11 @@ class MyFrame(wx.Frame):
             print(answer)
         except:
             #wikipedia
+            """
+            # Code for input splitting - I'll leave that alone for now. Currently you can't type in "who is ____", you can only type in "_____"
+            input = input.split(" ")
+            input = "".join(input[2:])
+            """
             print(wikipedia.summary(input))
 
 if __name__ == "__main__":
