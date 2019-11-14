@@ -5,10 +5,10 @@ class MyFrame(wx.Frame):
     def __init__(self):
         super().__init__(parent=None, title='Hello World')
         self.Show()
-        panel = wx.Panel(self)
+        panel = wx.Panel(self) # panels are REQUIRED for WINDOWS
 
-        self.text_ctrl = wx.TextCtrl(panel, pos=(5, 5))
-        my_btn = wx.Button(panel, label='Press Me', pos=(5, 55)) # creates button with wxPython library, label "Press Me"        
+        self.text_ctrl = wx.TextCtrl(panel, pos=(5, 5)) # text control - allows text to be created & edited
+        my_btn = wx.Button(panel, label='Press Me', pos=(5, 55)) # creates button with wxPython library, label "Press Me". Where to place the button widget (pos function)        
 
         self.Show()
 
