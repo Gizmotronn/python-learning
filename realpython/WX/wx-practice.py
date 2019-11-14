@@ -1,15 +1,18 @@
-import wx
 # https://realpython.com/python-gui-with-wxpython/
+import wx
 
-class MyFrame(wx.Frame):
+class MyFrame(wx.Frame):    
     def __init__(self):
-        super().__init__(parent=None, title="Hello World")
-        self.show()
+        super().__init__(parent=None, title='Hello World')
+        self.Show()
 
 if __name__ == '__main__':
     app = wx.App()
-    frame = myFrame()
+    frame = MyFrame()
     app.MainLoop() # main loop for app - waits for events to occur and then executes what's in the loop       
+
+
+
 
 """
 app = wx.App() # Creates & Intializes an app
