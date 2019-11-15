@@ -11,7 +11,7 @@ class Mp3Panel(wx.Panel): # Create user interface (UI), subclass wx.Panel
         main_sizer = wx.BoxSizer(wx.VERTICAL)
         self.row_obj_dict = {} # dictionary for data (store) about MP3 files
 
-        self..list_ctrl = wx.ListCtrl(
+        self.list_ctrl = wx.ListCtrl(
             self, size=(-1, 100), 
             style=wx.LC_REPORT | wx.BORDER_SUNKEN # sunken border (FLAG!!). # List report control (ctrl) - stores lists in formats
         )
@@ -29,3 +29,17 @@ class Mp3Panel(wx.Panel): # Create user interface (UI), subclass wx.Panel
 
     def update_mp3_listing(self, folder_path):
         print(folder_path)
+
+# Code for the frame
+
+class Mp3Frame(wx.Frame):
+    def __init__(self):
+        super().__init__(parent=None,
+                        title="Mp3 Tag Editor") # Window/Frame caption/title        
+        self.panel = Mp3Panel(self)
+        self.Show()
+
+if __name__ == '__main__':
+    app = wx.App(False)
+    frame = Mp3Frame()
+    app.MainLoop()
