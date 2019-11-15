@@ -1,0 +1,1 @@
+# https://realpython.com/python-gui-with-wxpython/#sizers-dynamic-sizing
