@@ -6,9 +6,9 @@ class MyFrame(wx.Frame):
         super().__init__(parent=None, title='Hello World')
         self.Show()
         panel = wx.Panel(self) # panels are REQUIRED for WINDOWS
-        my_sizer = wx.BoxSizer(wx.VERTICAL) # box sizer for absolute positioning & resizing windows/widgets
+        my_sizer = wx.BoxSizer(wx.VERTICAL) # box sizer for absolute positioning & resizing windows/widgets. # Sizers are used to control & define the layout of controls in dialogues. laying out subwindows
 
-        self.text_ctrl = wx.TextCtrl(panel, pos=(5, 5)) # text control - allows text to be created & edited
+        self.text_ctrl = wx.TextCtrl(panel, pos=(5, 5)) # text control - allows text to be created & edited - processes user input & displays units of data - base class for control or widget
         my_sizer.Add(self.text_ctrl, 0, wx.ALL | wx.EXPAND, 5)
         my_btn = wx.Button(panel, label='Press Me', pos=(5, 55)) # creates button with wxPython library, label "Press Me". Where to place the button widget (pos function). This is called ABSOLUTE POSITIONING        
         my_sizer.Add(my_btn, 0, wx.ALL | wx.CENTER, 5)
