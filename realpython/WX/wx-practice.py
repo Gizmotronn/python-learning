@@ -11,7 +11,7 @@ class MyFrame(wx.Frame):
         self.text_ctrl = wx.TextCtrl(panel, pos=(5, 5)) # text control - allows text to be created & edited - processes user input & displays units of data - base class for control or widget
         my_sizer.Add(self.text_ctrl, 0, wx.ALL | wx.EXPAND, 5) # wx.EXPAND makes widget expand as much as it can within the sizer; # wx.ALL says you want borders on all sides of the sizer. Using wx.CENTER would center the button on-screen
         my_btn = wx.Button(panel, label='Press Me', pos=(5, 55)) # creates button with wxPython library, label "Press Me". Where to place the button widget (pos function). This is called ABSOLUTE POSITIONING        
-        my_btn.Bind(wx.EVT_BUTTON, self.on_press)
+        my_btn.Bind(wx.EVT_BUTTON, self.on_press) # .Bind() takes the event you want to bind to, the handler to call when the event happens, an optional source, and a couple of optional ids.
         my_sizer.Add(my_btn, 0, wx.ALL | wx.CENTER, 5)
         panel.SetSizer(my_sizer)
         self.Show() # from lines 11-16 (from self.text_ctrl to now (self.Show()), this resizes the text box in "Press Me")
