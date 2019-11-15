@@ -41,6 +41,7 @@ ball.color("white")
 ball.penup()
 ball.goto(0, 0) # sets the coords for the original position for "ball"
 
+# Moving the paddles
 
 
 # Functions

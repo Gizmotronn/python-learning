@@ -114,3 +114,7 @@ string = "This is a string"
 print(string)
 >> #Output: This is
 ```
+
+# Python & Web
+https://docs.python.org/2/howto/webservers.html
+https://stackoverflow.com/questions/16348710/embedding-a-python-game-in-a-web-site
