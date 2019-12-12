@@ -26,12 +26,14 @@ while True:
 
     yourLastName = random.choice(lastNames)
 
-    print("\n\n")
-    print("{} {}".formate(yourFirstName, yourLastName), file-sys.stderr)
+    print(yourFirstName + " k " + yourLastName)
+
+    """print("\n\n")
+    print("{} {}".format(yourFirstName, yourLastName), file-sys.stderr)
     print("\n\n")
 
     try_again = input("\n\nTry again? (Press Enter else n to quit)\n ") # Exit loop (lines 33-37)
     if try_again.lower() == "n":
         break
 
-    input("\nPress Enter to exit. ")
+    input("\nPress Enter to exit. ")"""
