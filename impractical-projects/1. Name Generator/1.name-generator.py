@@ -26,7 +26,7 @@ while True:
 
     yourLastName = random.choice(lastNames)
 
-    print(yourFirstName + " k " + yourLastName)
+    print(yourFirstName + " " + yourLastName)
 
     print("\n\n")
     print("{} {}".format(yourFirstName, yourLastName), file-sys.stderr)
