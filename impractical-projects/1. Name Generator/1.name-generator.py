@@ -29,10 +29,10 @@ while True:
     print(yourFirstName + " " + yourLastName)
 
     print("\n\n")
-    print("{} {}".format(yourFirstName, yourLastName), file-sys.stderr)
+    print(firstNames, lastNames, file = sys.stderr)
     print("\n\n")
 
-    try_again = input("\n\nTry again? (Press Enter else n to quit)\n ") # Exit loop (lines 33-37)
+    try_again = input("\n\nTry again? (Press Enter else n to quit)\n ") # exit loop (35-37)
     if try_again.lower() == "n":
         break
 
