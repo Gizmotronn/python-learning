@@ -28,7 +28,7 @@ while True:
 
     print(yourFirstName + " k " + yourLastName)
 
-    """print("\n\n")
+    print("\n\n")
     print("{} {}".format(yourFirstName, yourLastName), file-sys.stderr)
     print("\n\n")
 
@@ -36,6 +36,6 @@ while True:
     if try_again.lower() == "n":
         break
 
-    input("\nPress Enter to exit. ")"""
+input("\nPress Enter to exit. ")
 
     
