@@ -32,8 +32,8 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         self.x = random.randrange(315, 425) # sets the x coordinate of the object (using random py module) to anywhere in the range of x = 315-425
         self.y = random.randrange(70,180) # does the same thing as above line, just with the y-axis
         self.dx = random.choice([-3, 3]) # Randomly sets the velocity of the class object to -3, 3 (x) // Neg values (-) - counter/anticlockwise orbit // Pos values (+/ ) - clockwise orbit 
-        self.dy = 0
-        self.heading = 0 # initialises satellite's dish orientation
+        self.dy = 0 # delta y. // Eventually the gravity module (import section) will establish dy values
+        self.heading = 0 # initialises satellite's dish orientation // Satellite dish should always point towards Mars // This needs to overcome inertia (more to come for this)
         self.fuel = 100
         self.mass = 1
         self.distance = 0 # initialises distance between satellite object and planet
