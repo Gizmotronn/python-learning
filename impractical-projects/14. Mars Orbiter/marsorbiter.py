@@ -49,7 +49,7 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         keys = pg.key.get_pressed() # uses pygame to detect which key was pressed, sends this to the keys variable
 
         # Firing thrusters
-        if keys[pg.K_RIGHT]:
+        if keys[pg.K_RIGHT]: # if key pressed call thruster() method/function, pass it some dx and dy values (see below). // this is the same for the elifs in this block as well
             self.thruster(dx=0.05, dy=0) # sets what happens if right arrow is pressed - dx is change by +0.05, dy (delta y) is still set to 0 (initialized value)
         elif keys[pg.K_LEFT]: # uses pygame (pg)
             self.thruster(dx=-0.05,0)  
