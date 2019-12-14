@@ -28,3 +28,14 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         self.image = self.image_sat
         self.rect = self.image.get_rect()
         self.image.set_colorkey(BLACK) # sets transparent colour - colour hex code (0, 0, 0) - defined in Colour Codes/Colour Table (see Program Contents)
+
+        self.x = random.randrange(315, 425) # sets the x coordinate of the object (using random py module) to anywhere in the range of x = 315-425
+        self.y = random.randrange(70,180) # does the same thing as above line, just with the y-axis
+        self.dx = random.choice([-3,])
+        self.dy = 0
+        self.heading = 0 # initialises satellite's dish orientation
+        self.fuel = 100
+        self.mass = 1
+        self.distance = 0 # initialises distance between satellite object and planet
+        self.thrust = pg.mixer.Sound('thurst_audio.ogg') # uses pygame(pg).mixer.Sound to use the "thrust_audio.ogg" sound file as the file of choice for self.thrust function // It is in .ogg rather than .mp3/other format because .ogg works well with python and pygame
+        self.thrust.set_volume(0.07) # Sets the volume of the audio file (above line) to 7% (0.07) // 1 = 100%, 0 = 0%
