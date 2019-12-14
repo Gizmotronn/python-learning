@@ -44,3 +44,16 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         self.dy += dy
         self.fuel -= 2 # when thruster is used, empties the fuel tank of the satellite slightly // thruster function in satellite class object // fuel function
         self.thrust.play() # makes the hissing sound // Call play() method 
+
+    def check_keys(self): # takes self as an argument // defines check_keys (like getKeyDown in Unity/C#) function
+        keys = pg.key.get_pressed() # uses pygame to detect which key was pressed, sends this to the keys variable
+
+        # Firing thrusters
+        if keys[pg.K_RIGHT]:
+            self.thruster(dx=0.05, dy=0) # sets what happens if right arrow is pressed - dx is change by +0.05, dy (delta y) is still set to 0 (initialized value)
+        elif keys[pg.K_LEFT]: # uses pygame (pg)
+            self.thruster(dx=-0.05,0)  
+        elif keys[pg.K_UP]:
+            self.thruster(dx=0, dy=-0.05)  
+        elif keys[pg.K_DOWN]:
+            self.thruster(dx=0, dy=0.05)      
