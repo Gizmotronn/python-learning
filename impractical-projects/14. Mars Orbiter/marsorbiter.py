@@ -39,3 +39,8 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         self.thrust = pg.mixer.Sound('thurst_audio.ogg') # uses pygame(pg).mixer.Sound to use the "thrust_audio.ogg" sound file as the file of choice for self.thrust function // It is in .ogg rather than .mp3/other format because .ogg works well with python and pygame
         self.thrust.set_volume(0.07) # Sets the volume of the audio file (above line) to 7% (0.07) // 1 = 100%, 0 = 0%
 
+    def thruster(self, dx, dy): # defines thruster function for the Satellite class object
+        self.xd += dx # sets the value for delta x for the thruster object
+        self.dy += dy
+        self.fuel -= 2 # when thruster is used, empties the fuel tank of the satellite slightly // thruster function in satellite class object // fuel function
+        self.thrust.play() # makes the hissing sound // Call play() method 
