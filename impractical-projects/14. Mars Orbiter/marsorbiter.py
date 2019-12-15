@@ -57,3 +57,14 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
             self.thruster(dx=0, dy=-0.05)  
         elif keys[pg.K_DOWN]:
             self.thruster(dx=0, dy=0.05)      
+
+    def locate(self, planet): # defines locate function/method for self, and planet // Self refers to the Satellite // Locating the satellite - calculates the distance of the satellite from the planet // Then determines the heading for pointing the dish at the planet // The locate mmethod needs to be passed the satellite (self) and the planet objects
+        px, py = planet.x, planet.y # for determining the distance between the planet and self objects in space (next 2 lines)
+        dist_x = self.x - px # the distance (x-coord) is the x coord of the self minus the coord of the planet's x
+        dist_y = self.y - py # same thing as above line
+
+        # getting direction to planet to point the dish of the satellite
+        planet_dir_radians = math.atan2(dist_x, dist_y) # calculate angle between the satellite's heading and the planet // So that you can rotate the satellite dish towards the planet
+        self.heading = planet_dir_radians * 180 / math.pi
+        self.heading -=90 # sprite is travelling tail first // In pygame, the front of a sprite is to the east (default) - self object is orbiting planet object tail-first // You need to subtract 90 degrees from the heading for the dish to point towards the planet object (Mars) - neg angles return clockwise rotation in pygame of objects (in this case self)
+        self.distance = math.hypot(dist_x, dist_y) # uses math's module - hypotunese function - to calculate the distance // Get the Euclidian distance between both objects 
