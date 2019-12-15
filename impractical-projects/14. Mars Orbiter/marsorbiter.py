@@ -121,3 +121,24 @@ class Planet(pg.sprite.Sprite): # Planet object that rotates, projects/creates g
         self.rect = self.image.get_rect()
         self.rect.center = last_center
         self.angle += self.rotate_by
+
+    # Defining gravity() & update() Methods
+    def gravity(self, satellite): # defines this for both the current self object (the planet) but also for the satellite game object
+        # Calculate impact of gravity on satellite
+        G = 1.0 # gravitational constant for the game/applet
+        dist_x = self.x - satellite.x # get distance (x)
+        dist_y = self.y - satellite.y # get distance (y)
+        distance = math.hypot(dist_x, dist_y) # get the Euclidian distance - represents r in the gravity equation
+
+        # Normalize to a unit vector
+        dist_x /= distance # The magnitude of the distance (physics, size/amount) is defined in the gravity equation // Therefore we only need to determine the direction from the distance vector here (see below line for more)
+        dist_y /= distance # Divide dist_x/y by distance to "normalize" the vector - to a unit vector with a magnitude of 1 (times the actual magnitude still gives correct calculation.)
+
+        # Apply gravity
+        force = G * (satellite.mass * self.mass) / (math.pow(distance, 2)) # Force of gravity // The Laws of Universal Gravity
+        satellite.dx += (dist_x * force) # Add these results (above line - force = G...) to the coordinates
+        satellite.dy += (dist_y * force)
+
+    def update(self):
+        # Calls the rotate method // Called every game loop
+        self.rotate()    
