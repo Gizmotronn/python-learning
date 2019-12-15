@@ -73,7 +73,7 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
 
      # Rotating the satellite and drawing its orbit
 
-     def rotate(self): # pygame - rotate self game object by passing it the rotate(self): method
+    def rotate(self): # pygame - rotate self game object by passing it the rotate(self): method
          # Rotates satellite using degrees so the dish faces the planet
          self.image = pg.transform.rotate(self.image_sat, self.heading) # the self.image function is equal/set to pygame rotating (a transformation - maths) the image_sat of self, and the heading of the self object // Rotates the IMAGE of the satellite (which is part of the self object)
          self.rect = self.image.get_rect() # end the function be getting the transformed image's rect object
