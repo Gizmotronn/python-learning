@@ -95,3 +95,20 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         if self.dx == 0 and self.dy == 0: # delta - so not moving
             self.image = self.image_crash # changes the image of self game object
             self.image.set_colorkey(BLACK)
+
+# Defining the Planet Class Initialization Method // Creating planet game object
+class Planet(pg.sprite.Sprite): # Planet object that rotates, projects/creates gravity/gravitational field (higgs - physics)
+
+    def __init__(self): # defines initialization method for self game object (right now, it is the planet, as we are in the Planet class object)
+        super().__init()
+        self.image_mars = pg.image.load("mars.png").convert # sets the image of the object to an image in this directory
+        self.image_water = pg.image.load("mars_water.png").convert()
+        self.image_copy.set_colorkey(BLACK)
+        self.rect = self.image_copy.get_rect()
+        self.image = self.image_copy # see initialization of satellite game object
+        self.mass = 2000
+        self.x = 400 # coordinates of (now) self game object
+        self.y = 320
+        self.rect.center = (self.x, self.y)
+        self.angle = math.degrees(0)
+        self.rotate_by = math.degrees(0.01)
