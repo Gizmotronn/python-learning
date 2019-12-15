@@ -58,6 +58,8 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         elif keys[pg.K_DOWN]:
             self.thruster(dx=0, dy=0.05)      
 
+    # Locating the Satellite
+
     def locate(self, planet): # defines locate function/method for self, and planet // Self refers to the Satellite // Locating the satellite - calculates the distance of the satellite from the planet // Then determines the heading for pointing the dish at the planet // The locate mmethod needs to be passed the satellite (self) and the planet objects
         px, py = planet.x, planet.y # for determining the distance between the planet and self objects in space (next 2 lines)
         dist_x = self.x - px # the distance (x-coord) is the x coord of the self minus the coord of the planet's x
@@ -67,4 +69,17 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         planet_dir_radians = math.atan2(dist_x, dist_y) # calculate angle between the satellite's heading and the planet // So that you can rotate the satellite dish towards the planet
         self.heading = planet_dir_radians * 180 / math.pi
         self.heading -=90 # sprite is travelling tail first // In pygame, the front of a sprite is to the east (default) - self object is orbiting planet object tail-first // You need to subtract 90 degrees from the heading for the dish to point towards the planet object (Mars) - neg angles return clockwise rotation in pygame of objects (in this case self)
-        self.distance = math.hypot(dist_x, dist_y) # uses math's module - hypotunese function - to calculate the distance // Get the Euclidian distance between both objects 
+        self.distance = math.hypot(dist_x, dist_y) # uses math's module - hypotunese function - to calculate the distance // Get the Euclidian distance between both objects
+
+     # Rotating the satellite and drawing its orbit
+
+     def rotate(self): # pygame - rotate self game object by passing it the rotate(self): method
+         # Rotates satellite using degrees so the dish faces the planet
+         self.image = pg.transform.rotate(self.image_sat, self.heading) # the self.image function is equal/set to pygame rotating (a transformation - maths) the image_sat of self, and the heading of the self object // Rotates the IMAGE of the satellite (which is part of the self object)
+         self.rect = self.image.get_rect() # end the function be getting the transformed image's rect object
+
+         # Update satellite's position & draw line to face orbital path
+         last_center = (self.x, self.y)
+         self.x += self.dx # sets the x coordinate of the self object using delta (physics)
+         self.y += self.xy # delta y/delta x (above line)
+         pg.draw.line(self.background, WHITE, last_center, (self.x, self.y)) # the orbital line/path
