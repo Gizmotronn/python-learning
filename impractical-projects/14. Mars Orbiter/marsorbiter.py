@@ -142,3 +142,11 @@ class Planet(pg.sprite.Sprite): # Planet object that rotates, projects/creates g
     def update(self):
         # Calls the rotate method // Called every game loop
         self.rotate()    
+
+# Calculating Eccentricity
+def calc_eccentricity(dist_list): # define and pass it a list of distances
+    # Calculate & return eccentricity from list of radii
+    apoapsis = max(dist_list) # get the apoapsis & periapsis by finding the max and min distances in the list defined above
+    periapsis = min(dist_list)
+    eccentricity = (apoapsis - periapsis) / (apoapsis + periapsis)
+    return eccentricity        
