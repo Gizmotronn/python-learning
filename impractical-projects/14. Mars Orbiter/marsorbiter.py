@@ -106,9 +106,18 @@ class Planet(pg.sprite.Sprite): # Planet object that rotates, projects/creates g
         self.image_copy.set_colorkey(BLACK)
         self.rect = self.image_copy.get_rect()
         self.image = self.image_copy # see initialization of satellite game object
-        self.mass = 2000
+        self.mass = 2000 # planet object is 2000 times as massive as the satellite!
         self.x = 400 # coordinates of (now) self game object
         self.y = 320
         self.rect.center = (self.x, self.y)
         self.angle = math.degrees(0)
         self.rotate_by = math.degrees(0.01)
+
+    # Rotating the planet
+    def rotate(self):
+        # Rotates the image with each game loop
+        last_center = self.rect.center
+        self.image = pg.transform.rotate(self.image_copy, self.angle)
+        self.rect = self.image.get_rect()
+        self.rect.center = last_center
+        self.angle += self.rotate_by
