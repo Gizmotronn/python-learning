@@ -83,3 +83,15 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
          self.x += self.dx # sets the x coordinate of the self object using delta (physics)
          self.y += self.xy # delta y/delta x (above line)
          pg.draw.line(self.background, WHITE, last_center, (self.x, self.y)) # the orbital line/path
+
+    # Updating the Satellite object
+    def update(self): # update satellite object during the game
+        self.check_keys()
+        self.rotate()
+        self.path()
+        self.rect.center = (self.x, self.y)
+
+        # Change image to fiery red if in atmosphere of planet (Mars)
+        if self.dx == 0 and self.dy == 0: # delta - so not moving
+            self.image = self.image_crash # changes the image of self game object
+            self.image.set_colorkey(BLACK)
