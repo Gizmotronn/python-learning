@@ -60,3 +60,4 @@ Array stores elements of type:  int64
 
 
 
+Stored here: [https://github.com/IrisDroidology/python-learning/blob/master/Udemy/Python%20Masterclass/numpy-arrays-intro.md](https://github.com/IrisDroidology/python-learning/blob/master/Udemy/Python Masterclass/numpy-arrays-intro.md)
