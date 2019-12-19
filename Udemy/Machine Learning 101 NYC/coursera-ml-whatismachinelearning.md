@@ -25,3 +25,15 @@ We teach the computer how to do something
 
 We let it learn by itself
 
+
+
+### Supervised Learning
+
+* Right answers given - data set with examples with values
+* Task - Produce more right answers based on the data sets given
+* AKA Regression problem - 
+  * Predict continuous valued output
+
+In **machine learning** and statistics, **classification** is the **problem** of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.
+
+**Regression** prediction **problems** are usually quantities or sizes. For example, when provided with a dataset about houses, and you are asked to predict their prices, that is a **regression** task because price will be a continuous output.
