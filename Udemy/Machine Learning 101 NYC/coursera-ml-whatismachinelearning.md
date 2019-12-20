@@ -37,3 +37,22 @@ We let it learn by itself
 In **machine learning** and statistics, **classification** is the **problem** of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.
 
 **Regression** prediction **problems** are usually quantities or sizes. For example, when provided with a dataset about houses, and you are asked to predict their prices, that is a **regression** task because price will be a continuous output.
+
+
+
+### Unsupervised Learning
+
+* Same labels for data set
+* Not told what to do with it
+* UL algorithms can create clusters of data - clustering algorithms
+
+Google News is an example of clustering algorithms:
+
+* Searches the internet and clusters thousands of stories into cohesive news articles
+* There are multiple different links (for example, news.com.au, news.abc.net.au); however if they are about the same story, they will be classed under the same header (or clustered)
+
+Google News example:
+
+![image-20191220084700137](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220084700137.png)
+
+* We aren't telling the algorithm in advance that these news articles are part of the same category; this is why it is unsupervised learning
