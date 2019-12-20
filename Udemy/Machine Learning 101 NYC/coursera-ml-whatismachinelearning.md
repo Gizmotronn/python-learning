@@ -56,3 +56,49 @@ Google News example:
 ![image-20191220084700137](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220084700137.png)
 
 * We aren't telling the algorithm in advance that these news articles are part of the same category; this is why it is unsupervised learning
+
+**Model Representation**
+
+Key:
+
+* x^(i) refers the "input variables"/input features
+* y^(i) refers to the output, or target variable that we are trying to predict
+* A pair (x,y) refers to a **training example**
+* m refers to a list of training examples - training set
+* The subscript (i) is only used for notation - does not refer to exponentials
+
+The supervised learning problem:
+
+* The goal is - given a training set - to learn a function h:X-->Y so that h(x) is a good predictor for the corresponding value of y
+* The function h is referred to as a hypothesis:
+
+![img](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/H6qTdZmYEeaagxL7xdFKxA_2f0f671110e8f7446bb2b5b2f75a8874_Screenshot-2016-10-23-20.14.58.png?expiry=1576972800000&hmac=SWnrvXOkdYbrt3vzwguvVRiRlLRa9lUtkfshuqCYkFw)
+
+When the target variable that we’re trying to predict is continuous, such as in our housing example, we call the learning problem a regression problem. When y can take on only a small number of discrete values (such as if, given the living area, we wanted to predict if a dwelling is a house or an apartment, say), we call it a classification problem.
+
+
+
+## Cost Function
+
+* Hypothesis: h(theta)(x) = (theta.0) + (theta.1)x
+* Theta.i - Parameters
+
+Example:
+
+* Theta 1 = 1.5
+* Theta 2 = 0:
+* ![image-20191220172958013](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220172958013.png)
+
+* ![image-20191220173026729](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173026729.png)
+
+
+
+Linear regression:
+
+![image-20191220173225174](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173225174.png)
+
+Choose the values of theta so that h(x) is as close to y for our training examples (x,y) as possible (see blue line going through the data set/training examples)
+
+Equation for this: ![image-20191220173753721](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173753721.png)
+
+![image-20191220173934902](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173934902.png)
