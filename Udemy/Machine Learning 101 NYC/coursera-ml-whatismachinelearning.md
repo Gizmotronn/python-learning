@@ -172,3 +172,5 @@ To find the cost function value (J) of theta.1 = 0.5, we need to do this:
 * Therefore, when theta.1 is equal to 0.5, J(theta.1) is equal to 0.68/0.58
 
 ![image-20191221144313329](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221144313329.png)
+
+![image-20191221160622112](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221160622112.png)
