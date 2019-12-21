@@ -102,3 +102,73 @@ Choose the values of theta so that h(x) is as close to y for our training exampl
 Equation for this: ![image-20191220173753721](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173753721.png)
 
 ![image-20191220173934902](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191220173934902.png)
+
+
+
+### Cost Function Intuition
+
+![image-20191221141955432](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221141955432.png)
+
+The hypothesis is the line that passes through the origin, (1,1), (2,2), & (3,3). Theta1 = 1
+
+* The Cost function is equal to 0^2, or 0 - as Theta 1 is 1
+* J(1) = 0
+
+**The Cost Function is  a parameter of the function (theta.1)**. This means that the horizontal axis is labelled (theta.1), the vertical (y) axis is labelled (J(Theta.1)). 
+
+```
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+```
+
+**h(theta(x)) - x & y)**
+
+* When theta 1 is equal to 0:
+
+| x-coordinate | y-coordinate |
+| ------------ | ------------ |
+| 0            | 0            |
+| 0.5          | 0            |
+| 1            | 0            |
+| 1.5          | 0            |
+
+
+
+* When theta 1 is equal to 0.5:
+
+| x-coordinate | y-coordinate |
+| ------------ | ------------ |
+| 0            | 0            |
+| 0.5          | 0.25         |
+| 1            | 0.5          |
+| 1.5          | 0.75         |
+
+
+
+* When theta 1 is equal to 1:
+
+| x-coordinate | y-coordinate |
+| ------------ | ------------ |
+| 0            | 0            |
+| 1            | 1            |
+| 1.5          | 1.5          |
+| 2            | 2            |
+
+As we can see by this, the theta 1 function is equal to the gradient
+
+![image-20191221143422540](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221143422540.png)
+
+* In the left graph, we can see that as theta 1 is equal to 0.5, the gradient is 0.5 (when x = 1, y = 0.5; when x = 3, y = 1.5)
+* On the right graph, we can see that when theta 1 is equal to 1 (or the gradient is 1), the cost function is equal to 0
+
+To find the cost function value (J) of theta.1 = 0.5, we need to do this:
+
+* ![image-20191221143727059](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221143727059.png)
+
+* 1/2m - m is the number of "training sets"
+* (0.5-1)^2 - the actual value (i.e. the value of x = 1 when theta.1 is equal to 1) is 1, while the value when theta.1 is equal to 0.5 is 0.5. This part of the function is the hypothesis value - the actual value and squared. This is repeated for every part of the training set.
+* Therefore, when theta.1 is equal to 0.5, J(theta.1) is equal to 0.68/0.58
+
+![image-20191221144313329](C:\Users\arbuc\AppData\Roaming\Typora\typora-user-images\image-20191221144313329.png)
