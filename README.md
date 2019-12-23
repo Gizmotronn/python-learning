@@ -118,3 +118,7 @@ print(string)
 # Python & Web
 https://docs.python.org/2/howto/webservers.html
 https://stackoverflow.com/questions/16348710/embedding-a-python-game-in-a-web-site
+
+
+# What's going on - December 2019
+I'm devoting most of my time to studying Machine Learning and completing the Python Masterclass on Udemy
