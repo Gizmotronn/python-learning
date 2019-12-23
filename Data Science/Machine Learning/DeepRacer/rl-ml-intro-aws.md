@@ -28,3 +28,48 @@ Other types of machine learning include:
 * The agent simulates the AWS DeepRacer vehicle in the simulation for training
 * It embodies the neural network that controls the vehicle, taking inputs and deciding actions
 
+*Environment*
+
+* Contains a track that defines where the agent can go and what state it can be in
+* The agent explores the environment to collect data to train the underlying neural network
+
+*State*
+
+* A state represents a snapshot of the environment the agent is in at a point in time
+* For the DR, a state is an image captured by the front-facing camera on the vehicle
+
+*Action*
+
+* An action is a move made by the agent in the current state
+* For the DR, an action corresponds to a move at a particular speed and steering angle
+
+*Reward*
+
+* The reward is the score given as feedback to the agent when it takes an action in a given state
+* The reward is returned by a reward function - training
+* You define/supply a reward function to specify what is actions are desirable for the agent to take in a given state
+
+
+
+**Training RL Models**
+
+* Training is an iterative process
+* In the simulator, the agent explores the environment and builds up experience
+* The experiences collected are used to update the neural network periodically, these then are used to create more experiences
+
+
+
+**Reward function for Deep Racer**
+
+* The reward function is a python function.
+* It is given certain parameters that describe the current state; it then returns a numeric reward value
+* These parameters include:
+  * Position on track (x, y parameters)
+  * Heading (orientation of the vehicle in degrees. Measured anticlockwise from the x-axis)
+  * Waypoints (Ordered list of milestones placed along the track. Each waypoint is a pair of x,y coords)
+  * Track width (width of the track in meters)
+  * Distance from center line (measures the displacement of the vehicle from the center of the track)
+    * is_left_of_center: boolean (true/false)
+  * All wheels on track - boolean (true/false)
+  * Speed - meters per second (numerical value)
+  * Steering Angle - (negative if steering right - measured in degrees)
