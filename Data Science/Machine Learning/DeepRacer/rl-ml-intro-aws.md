@@ -17,4 +17,14 @@ Other types of machine learning include:
 
 **Reward?**
 
-* In reinforcement learning, 
+* In reinforcement learning, an *agent* interacts with an *environment* with an objective to maximize its total *reward*
+* The agent takes an *action* based on the environment *state*, which then returns the reward and the next state.
+* Using trial and error, the agent learns from this and after initially taking random actions, it starts identifying the actions that lead to long-term rewards
+
+
+
+*Agent*
+
+* The agent simulates the AWS DeepRacer vehicle in the simulation for training
+* It embodies the neural network that controls the vehicle, taking inputs and deciding actions
+
