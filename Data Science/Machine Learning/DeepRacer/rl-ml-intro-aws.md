@@ -143,3 +143,42 @@ def reward_function(params):
     return 1.0
 ```
 
+#### The Reward Function
+
+**1. Stay on Track**
+
+* In this script, a high reward is given when the car stays on the track
+* "Points" are penalized if the car deviates from the track boundaries
+
+The function uses the following parameters:
+
+* all_wheels_on_track
+* distance_from_center
+* track_width
+
+These parameters determine if the car is on the track, and therefore can give a high reward if so
+
+As the function doesn't reward any other kind of behavior, it can take a longer time to converge to a specific behavior
+
+*Script*:
+
+```python
+def reward_function(params):
+    # Example of rewarding the agent if it stays inside the two borders of the track
+    
+    # Read input parameters
+    all_wheels_on_track = params['all_wheels_on_track']
+    distance_from_center = params['distance_from_center']
+    track_width = params['track_width']
+    
+    # By Default, the function returns a low reward
+    reward = 1e-3
+    
+    # If no wheels go off the track and the agent is between the track borders, a high reward is given
+    if all_wheels_on_track and (0.5*track_width - distance_from_center) >= 0.05:
+        reward = 1.0
+        
+    # Always return a float value
+    return float(reward)
+```
+
