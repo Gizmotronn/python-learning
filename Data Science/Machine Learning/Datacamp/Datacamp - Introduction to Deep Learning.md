@@ -19,4 +19,30 @@ This will depend on a number of variables:
 **Linear Regression Model** for this
 
 * Assumes that the *number of transactions* is a sum of individual parts
-* It identifies the relationships between these parts/variables
+* It identifies the relationships & interactions between these parts/variables
+
+
+
+## Interactions
+
+* Deep learning uses powerful *neural networks*
+  * Text
+  * Images
+  * Audio
+  * Videos
+  * Source files/code
+
+
+
+## Interactions in a neural network
+
+* Input layer
+  * Age
+  * Income
+  * (#) of accounts
+* Output layer
+  * Number of transactions
+* Anything else - hidden layer
+
+
+
