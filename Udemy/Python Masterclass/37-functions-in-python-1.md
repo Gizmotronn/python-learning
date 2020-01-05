@@ -93,3 +93,35 @@ def outFunction(x):
 print(outFunction)  
 ```
 
+
+
+# Recursion
+
+[`Course Link`](https://www.udemy.com/course/python-masterclass-for-beginners/learn/lecture/13270196#content)
+
+
+
+### Factorial Function
+
+* f(n) = n * n-1 * n-2
+* f(1) = 1  * 1! = 1
+* f(2) = 2 * 1!
+* f(3) = 3 * 2!  /// = 3 * f(2)
+
+```python
+def factorial(n):
+    if n == 1:
+        return 1 # ends function/algorithm & returns 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(4))    # can use any int/float
+    
+'''
+* f(n) = n * n-1 * n-2
+* f(1) = 1  * 1! = 1
+* f(2) = 2 * 1!
+* f(3) = 3 * 2!  /// = 3 * f(2)
+'''    
+```
+
