@@ -115,7 +115,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-print(factorial(4))    # can use any int/float
+print(factorial(4))    # can use any int/float // Prints 24 = 4 * 3!
     
 '''
 * f(n) = n * n-1 * n-2
