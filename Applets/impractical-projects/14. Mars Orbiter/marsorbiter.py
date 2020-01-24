@@ -151,3 +151,6 @@ def calc_eccentricity(dist_list): # define and pass it a list of distances
     eccentricity = (apoapsis - periapsis) / (apoapsis + periapsis)
     return eccentricity   
 
+# Functions to make labels
+def instruct_label(screen, text, color, x, y): # Take screen, list of strings, color, & origin and render text to screen
+    instruct_font = pg.font.SysFont(None, 25) # uses pygame (pg) module (via pip) to set the font // Uses the same readout as the sys/error output in Python's default IDLE 
