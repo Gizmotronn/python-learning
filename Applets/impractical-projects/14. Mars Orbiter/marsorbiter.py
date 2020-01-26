@@ -160,9 +160,9 @@ def instruct_label(screen, text, color, x, y): # Take screen, list of strings, c
         screen.blit(label, (x, y + index * line_spacing)) # Finish by blitting the text to the screen
 
 def box_label(screen, text, dimensions): # make fixed-sized label from screen // text & left, top, width, height // For the data readout labels that will appear as gauges at the top of the game screen // Screen, text, dimensions are the parameters
-    readout_font = pg.font.SysFont(None, 27) 
-    base = pg.Rect(dimensions)
-    pg.draw.rect(screen, WHITE, base, 0)
+    readout_font = pg.font.SysFont(None, 27)
+    base = pg.Rect(dimensions) # the surfaces made my "instruct_label" will automatically change size to accomodate the amount of text being displayed (see line 162). // As the data will change constantly, if this continues to occur the gauges and their size will also change constantly // To mitigate this, a stand-alone "rect" object of a specified size will form the base for the text object
+    pg.draw.rect(screen, WHITE, base, 0) 
     label = readout_font.render(text, True, BLACK)
     label_rect = label.get_rect(center=base.center)
-    screen.blit(label. label_rect)        
+    screen.blit(label, label_rect)      # blit to the screen   
