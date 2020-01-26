@@ -89,7 +89,7 @@ class Satellite(pg.sprite.Sprite): # creates a class object - Satellite Object /
         self.check_keys()
         self.rotate()
         self.path()
-        self.rect.center = (self.x, self.y)
+        self.rect.center = (self.x, self.y) 
 
         # Change image to fiery red if in atmosphere of planet (Mars)
         if self.dx == 0 and self.dy == 0: # delta - so not moving
