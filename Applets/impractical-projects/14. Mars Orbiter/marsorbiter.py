@@ -155,12 +155,12 @@ def calc_eccentricity(dist_list): # define and pass it a list of distances
 def instruct_label(screen, text, color, x, y): # Take screen, list of strings, color, & origin and render text to screen // For displaying instructions on the game screen
     instruct_font = pg.font.SysFont(None, 25) # uses pygame (pg) module (via pip) to set the font // Uses the same readout as the sys/error output in Python's default IDLE // None invokes the default pygame font
     line_spacing = 22 # 22 pixels
-    for index, line in enumerate(text):
-        label = instruct_font.render(line, True, color, BLACK)
-        screen.blit(label, (x, y + index * line_spacing))
+    for index, line in enumerate(text): # Start looping through the list of text strings. // The enumerate is used to get an INDEX // the index value will be used with the line_spacing variable to post the strings in the correct locations
+        label = instruct_font.render(line, True, color, BLACK) # The text needs to be placed on a surface, which has been given the name "label" 
+        screen.blit(label, (x, y + index * line_spacing)) # Finish by blitting the text to the screen
 
-def box_label(screen, text, dimensions): # make fixed-sized label from screen // text & left, top, width, height
-    readout_font = pg.font.SysFont(None, 27)
+def box_label(screen, text, dimensions): # make fixed-sized label from screen // text & left, top, width, height // For the data readout labels that will appear as gauges at the top of the game screen // Screen, text, dimensions are the parameters
+    readout_font = pg.font.SysFont(None, 27) 
     base = pg.Rect(dimensions)
     pg.draw.rect(screen, WHITE, base, 0)
     label = readout_font.render(text, True, BLACK)
