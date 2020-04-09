@@ -45,5 +45,3 @@ print("End Program") # output
 * `File "C\Users\........" & python "c://Users........conditions.py" [line break] File "..."`
 
 * `Indentation error: expected an indent block` 
-
-
