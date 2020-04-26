@@ -31,5 +31,3 @@ else:
 * If none of the other conditions are met, the `else` is **always** followed
 
 * It must be placed directly at the end of the conditions block
-
-
