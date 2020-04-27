@@ -16,7 +16,7 @@ char = pygame.image.load('standing.png')
 clock = pygame.time.Clock()
 
 screenWidth = 500
-screenHeight = 480
+screenHeight = 480 
 
 # Character Attributes
 x = 50 # x position of character
