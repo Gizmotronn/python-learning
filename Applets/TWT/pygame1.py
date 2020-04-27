@@ -19,38 +19,43 @@ screenWidth = 500
 screenHeight = 480 
 
 # Character Attributes
-x = 50 # x position of character
-y = 400 # remembering that the coords start from the top left of the screen in pygame /#/  can change
-width = 40
-height = 60
-vel = 5 # speed of character --> how fast it moves
-# Character Jump
-isJump = False # indicates if character is jumping
-jumpCount = 10
+class player(object):
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.vel = 5
+        self.isJump = False
+        self.jumpCount = 10
+        self.left = False
+        self.right = False
+        seld.walkCount = 0 # See end of document to see what it looked like without object oriented
 
-left = False
-right = False
-walkCount = 0 # How many steps we had
+    def draw(self,win): # argument of the window
+    if self.walkCount + 1 >= 27: # frame rate 
+        self.walkCount = 0
+
+    if left:
+        win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+        self.walkCount += 1
+    elif right: 
+        win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
+        self.walkCount += 1
+    else: 
+        win.blit(char, (self.x,self.y))
 
 def redrawGameWindow():
     global walkCount # Global allows it to be seen anywhere
 
     win.blit(bg, (0,0))  
-    
-    if walkCount + 1 >= 27: # frame rate 
-        walkCount = 0
 
-    if left:
-        win.blit(walkLeft[walkCount//3], char, (x,y))
-        walkCount += 1
-    elif right: 
-        win.blit(walkRight[walkCount//3], char, (x,y))      # integer remainder
-        walkCount += 1
-    else: 
-        win.blit(char, (x,y))                 
+    man.draw(win)         
+
     pygame.display.update()   
 
 # Main Game loop
+man = player(300, 410, 64, 64)
 run = True
 while run == True:
     clock.tick(27) # FPS Set to 27
@@ -61,34 +66,39 @@ while run == True:
 
     keys = pygame.key.get_pressed() # makes use of the module's ability to detect the key that the player presses down on. // Pygame can also look at mouse movement
 
-    if keys[pygame.K_LEFT] and x > vel: # left arrow key    // Solving the problem with character moving off the screen
-        x -= vel
-        left = True
-        right = False
-    elif keys[pygame.K_RIGHT] and x < screenWidth - width - vel:       
-        x += vel 
-        right = True
-        left = False  
+    if keys[pygame.K_LEFT] and man.x > man.vel: # left arrow key    // Solving the problem with character moving off the screen
+        man.x -= man.vel
+        man.left = True
+        man.right = False
+    elif keys[pygame.K_RIGHT] and man.x < screenWidth - man.width - man.vel:       
+        man.x += man.vel 
+        man.right = True
+        man.left = False  
     else: 
-        right = False
-        left = False
-        walkCount = 0         
-    if not(isJump): # no double jump   
+        man.right = False
+        man.left = False
+        man.walkCount = 0         
+    if not(man.isJump): # no double jump   
         if keys[pygame.K_SPACE]:
-            isJump = True    
-            right = False
-            left = False
-            walkCount = 0
+            man.isJump = True    
+            man.right = False
+            man.left = False
+            man.walkCount = 0
     else: 
-        if jumpCount >= -10:
+        if man.jumpCount >= -10:
             neg = 1
-            if jumpCount < 0:
+            if man.jumpCount < 0:
                 neg = -1
-            y -= (jumpCount ** 2) * 0.5 * neg# or: /2
-            jumpCount -= 1 # slowly move down in jump // decrement
+            y -= (man.jumpCount ** 2) * 0.5 * neg# or: /2
+            man.jumpCount -= 1 # slowly move down in jump // decrement
         else: # jump has concluded
-            isJump = False
-            jumpCount = 10 
+            man.isJump = False
+            man.jumpCount = 10 
     redrawGameWindow()                       
 
 pygame.quit()       
+
+"""
+Backups/Commits
+Ep 3/4 Interval: https://github.com/IrisDroidology/python-learning/commit/ef7ceb5c1d8cf08b2520993cf646c43e646523b5
+"""
