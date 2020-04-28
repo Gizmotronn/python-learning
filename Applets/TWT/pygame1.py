@@ -30,20 +30,37 @@ class player(object):
         self.jumpCount = 10
         self.left = False
         self.right = False
-        seld.walkCount = 0 # See end of document to see what it looked like without object oriented
+        self.walkCount = 0 # See end of document to see what it looked like without object oriented
+        self.standing = True # standing still
 
     def draw(self,win): # argument of the window
     if self.walkCount + 1 >= 27: # frame rate 
         self.walkCount = 0
 
-    if left:
-        win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
-        self.walkCount += 1
-    elif right: 
-        win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
-        self.walkCount += 1
+    if not(self.standing):
+        if left:
+            win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+            self.walkCount += 1
+        elif right: 
+            win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
+            self.walkCount += 1
     else: 
-        win.blit(char, (self.x,self.y))
+        if self.right:
+            win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
+        else: 
+            win.blit(walkLeft[0], (self.x, self.y))
+
+class projectile(object):
+    def __init__(self,x,y,radius,color,facing):
+        self.x = x
+        self.y = y
+        self.radius = radius
+        self.color = color
+        self.facing = facing
+        self.vel = 8 * facing # determines whether the projectile will move left or right
+
+    def draw(win):
+        pygame.draw.circle(win, self.color, (self.x,self.y), self.radius) # ,1 before the close bracket makes the circle not filled in    
 
 def redrawGameWindow():
     global walkCount # Global allows it to be seen anywhere
@@ -56,6 +73,7 @@ def redrawGameWindow():
 
 # Main Game loop
 man = player(300, 410, 64, 64)
+bullets = [] # list --> projectiles//
 run = True
 while run == True:
     clock.tick(27) # FPS Set to 27
@@ -63,23 +81,32 @@ while run == True:
     for event in pygame.event.get(): #makes use of the module's event get feature 
         if event.type == pygame.QUIT: # if the player closes the game
             run = False # set the main game loop to false // Boolean
+    for bullet in bullets # for every bullet inside the "bullets"list
+        if bullet.x < 500 and bullet.x > 0: # bullet not going off screen
+            bullet.x += bullet.vel 
+        else: # bullet is off screen
+            bullets.pop(bullets.index(bullet)) # pop = remove element            
 
     keys = pygame.key.get_pressed() # makes use of the module's ability to detect the key that the player presses down on. // Pygame can also look at mouse movement
+
+    if keys[pygame.K_SPACE:
+        if len(bullets)
 
     if keys[pygame.K_LEFT] and man.x > man.vel: # left arrow key    // Solving the problem with character moving off the screen
         man.x -= man.vel
         man.left = True
         man.right = False
+        man.standing = False
     elif keys[pygame.K_RIGHT] and man.x < screenWidth - man.width - man.vel:       
         man.x += man.vel 
         man.right = True
         man.left = False  
+        man.standing = False # not standing still, not facing the player
     else: 
-        man.right = False
-        man.left = False
+        man.standing = True # we know if the player/man is/was moving right/left --> direction 
         man.walkCount = 0         
     if not(man.isJump): # no double jump   
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_UP]:
             man.isJump = True    
             man.right = False
             man.left = False
