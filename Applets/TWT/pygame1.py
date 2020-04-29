@@ -37,7 +37,7 @@ class player(object):
     if self.walkCount + 1 >= 27: # frame rate 
         self.walkCount = 0
 
-    if not(self.standing):
+    if not(self.standing): # if the character is not standing still, he will be facing to the left, or to the right, depending on the direction he moved in first. // This is so that the bullets "know" where to go as well as for just aesthetics and neatness
         if left:
             win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
             self.walkCount += 1
