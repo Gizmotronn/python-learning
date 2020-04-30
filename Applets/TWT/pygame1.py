@@ -9,21 +9,22 @@ pygame.display.set_caption("Pygame") # sets the window caption
 # This goes outside the while loop, near the top of the program
 walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')] # list
 walkLeft = [pygame.image.load('L1.png'), pygame.image.load('L2.png'), pygame.image.load('L3.png'), pygame.image.load('L4.png'), pygame.image.load('L5.png'), pygame.image.load('L6.png'), pygame.image.load('L7.png'), pygame.image.load('L8.png'), pygame.image.load('L9.png')] # You COULD flip the images, but that's not what's happening here :)
-bg = pygame.image.load('bg.jpg')
-char = pygame.image.load('standing.png')
+bg = pygame.image.load('bg.jpg') # background images
+char = pygame.image.load('standing.png') # the character when there is no movement // i.e. he is standing still
 
 # Clock
-clock = pygame.time.Clock()
+clock = pygame.time.Clock() # replaces "import time" return "time.sleep(1)" for e.g. // Pygame clock/time
 
+# Screen/Window Dimensions
 screenWidth = 500
 screenHeight = 480 
 
 # Character Attributes
-class player(object):
+class player(object): # create a class --> object oriented programming
     def __init__(self, x, y, width, height):
-        self.x = x
+        self.x = x # x coord of the "self" // player
         self.y = y
-        self.width = width
+        self.width = width # Character Attributes --> man = player(self.attribute values) in Main Game Loop
         self.height = height
         self.vel = 5
         self.isJump = False
@@ -34,21 +35,21 @@ class player(object):
         self.standing = True # standing still
 
     def draw(self,win): # argument of the window
-    if self.walkCount + 1 >= 27: # frame rate 
-        self.walkCount = 0
+        if self.walkCount + 1 >= 27: # frame rate 
+            self.walkCount = 0
 
-    if not(self.standing): # if the character is not standing still, he will be facing to the left, or to the right, depending on the direction he moved in first. // This is so that the bullets "know" where to go as well as for just aesthetics and neatness
-        if left:
-            win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
-            self.walkCount += 1
-        elif right: 
-            win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
-            self.walkCount += 1
-    else: 
-        if self.right:
-            win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
+        if not(self.standing): # if the character is not standing still, he will be facing to the left, or to the right, depending on the direction he moved in first. // This is so that the bullets "know" where to go as well as for just aesthetics and neatness
+            if left:
+                win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+                self.walkCount += 1
+            elif right: 
+                win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
+                self.walkCount += 1
         else: 
-            win.blit(walkLeft[0], (self.x, self.y))
+            if self.right:
+                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
+            else: 
+                win.blit(walkLeft[0], (self.x, self.y))
 
 class projectile(object):
     def __init__(self,x,y,radius,color,facing):
@@ -72,7 +73,7 @@ def redrawGameWindow():
     pygame.display.update()   
 
 # Main Game loop
-man = player(300, 410, 64, 64)
+man = player(300, 410, 64, 64) # dimensions --> see class player(object) ^^^^
 bullets = [] # list --> projectiles//
 run = True
 while run == True:
@@ -81,16 +82,19 @@ while run == True:
     for event in pygame.event.get(): #makes use of the module's event get feature 
         if event.type == pygame.QUIT: # if the player closes the game
             run = False # set the main game loop to false // Boolean
-    for bullet in bullets # for every bullet inside the "bullets"list
-        if bullet.x < 500 and bullet.x > 0: # bullet not going off screen
-            bullet.x += bullet.vel 
-        else: # bullet is off screen
+    for bullet in bullets: # for every bullet inside the "bullets"list
+        if bullet.x < 500 and bullet.x > 0: # bullet not going off screen // Bullet coordinates (property of x, projectile class object)
+            bullet.x += bullet.vel # allows the bullet to be shot // moves by the vel every second (see pygameClock/pyClock)
+        else: # bullet is off screen // As this is looking at each indivdual bullet, it will only "pop" the one that is off screen, this function can? run the same/both options at the same time...
             bullets.pop(bullets.index(bullet)) # pop = remove element            
 
     keys = pygame.key.get_pressed() # makes use of the module's ability to detect the key that the player presses down on. // Pygame can also look at mouse movement
 
-    if keys[pygame.K_SPACE:
-        if len(bullets)
+    if keys[pygame.K_SPACE]:
+        if man.left:
+            facing = 1 # boolean//man/player is facing left
+        if len(bullets) < 5: # How many bullets we want the maximum amount to be
+            bullets.append(projectile(round(man.x + man.width // 2), round(man.y + man.height//2), 6, (0,0,0), ))# append --> add to the end of the list // Projectile object attributes
 
     if keys[pygame.K_LEFT] and man.x > man.vel: # left arrow key    // Solving the problem with character moving off the screen
         man.x -= man.vel
