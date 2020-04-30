@@ -60,7 +60,7 @@ class projectile(object):
         self.facing = facing
         self.vel = 8 * facing # determines whether the projectile will move left or right
 
-    def draw(win):
+    def draw(self, win):
         pygame.draw.circle(win, self.color, (self.x,self.y), self.radius) # ,1 before the close bracket makes the circle not filled in    
 
 def redrawGameWindow():
@@ -71,6 +71,9 @@ def redrawGameWindow():
     man.draw(win)         
 
     pygame.display.update()   
+
+    for bullet in bullets:
+        bullet.draw(win)
 
 # Main Game loop
 man = player(300, 410, 64, 64) # dimensions --> see class player(object) ^^^^
@@ -92,7 +95,9 @@ while run == True:
 
     if keys[pygame.K_SPACE]:
         if man.left:
-            facing = 1 # boolean//man/player is facing left
+            facing = -1 # boolean//man/player is facing left // Affects other stuff now // Negative direction
+        else:
+            facing = 1
         if len(bullets) < 5: # How many bullets we want the maximum amount to be
             bullets.append(projectile(round(man.x + man.width // 2), round(man.y + man.height//2), 6, (0,0,0), ))# append --> add to the end of the list // Projectile object attributes
 
