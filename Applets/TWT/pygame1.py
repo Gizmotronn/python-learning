@@ -3,7 +3,7 @@ pygame.init() # Initialises pygame
 
 win = pygame.display.set_mode((500, 500)) # uses the pygame module to create a window, called win, that is 500px*500px
 
-pygame.display.set_caption("Pygame") # sets the window caption
+pygame.display.set_caption("Pygame") # sets the window caption or title
 
 # Loading images/sprites
 # This goes outside the while loop, near the top of the program
@@ -16,10 +16,10 @@ char = pygame.image.load('standing.png') # the character when there is no moveme
 clock = pygame.time.Clock() # replaces "import time" return "time.sleep(1)" for e.g. // Pygame clock/time
 
 # Screen/Window Dimensions
-screenWidth = 500
+screenWidth = 500 # the screen is set to 500 pixels wide and 480 pixels tall (see below line)
 screenHeight = 480 
 
-# Character Attributes
+# Character/Player Attributes
 class player(object): # create a class --> object oriented programming
     def __init__(self, x, y, width, height):
         self.x = x # x coord of the "self" // player
@@ -51,18 +51,21 @@ class player(object): # create a class --> object oriented programming
             else: 
                 win.blit(walkLeft[0], (self.x, self.y))
 
-class projectile(object):
+# Projectiles/Bullets
+class projectile(object): # object oriented --> projectile object
     def __init__(self,x,y,radius,color,facing):
-        self.x = x
+        self.x = x 
         self.y = y
-        self.radius = radius
+        self.radius = radius 
         self.color = color
         self.facing = facing
-        self.vel = 8 * facing # determines whether the projectile will move left or right
+        self.vel = 8 * facing # determines whether the projectile will move left or right; // 8 is part of the magnitude (facing is direction); so that it would move 8 pixels per second (for example)
 
-    def draw(self, win):
+    def draw(self, win): # drawing the projectile/bullet
         pygame.draw.circle(win, self.color, (self.x,self.y), self.radius) # ,1 before the close bracket makes the circle not filled in    
 
+# Redraw Game Window Function
+"""This is so that the screen refreshes (see in the main game loop); without this nothing would happen after the initial blit?"""
 def redrawGameWindow():
     global walkCount # Global allows it to be seen anywhere
 
@@ -108,7 +111,7 @@ while run == True:
         man.standing = False
     elif keys[pygame.K_RIGHT] and man.x < screenWidth - man.width - man.vel:       
         man.x += man.vel 
-        man.right = True
+        man.right = True # helps identify which direction the player faces in when jumping, and the direction that the projectiles would go
         man.left = False  
         man.standing = False # not standing still, not facing the player
     else: 
@@ -116,8 +119,8 @@ while run == True:
         man.walkCount = 0         
     if not(man.isJump): # no double jump   
         if keys[pygame.K_UP]:
-            man.isJump = True    
-            man.right = False
+            man.isJump = True # The player/man IS JUMPING   
+            man.right = False 
             man.left = False
             man.walkCount = 0
     else: 
