@@ -140,3 +140,118 @@ print(myObject.age) # was 45, now 5
 ```
 
 * We are therefore able to access the attributes of an object, just by calling it
+
+
+
+## Tutorial 3 --> Inheritance
+
+We're modifying the above script, removing some stuff:
+
+```python
+class Dog(object): # New class (dog), inherits from "object"
+    def __init__(self, name, age): # initializes the function/class / def = method /(things you call in the class)
+		self.name = name  # creating an attribute
+        self.age = age
+    
+    def speak(self):
+        #pass
+        print("Hi I am ", self.name, ' and I am ', self.age, ' years old.')
+      
+class Cat(object): 
+        def __init__(self, name, age, color): # initializes the function/class / def = method /(things you call in the class)
+        self.color = color
+        self.name = name
+        self.age = age
+    
+    def speak(self):
+        #pass
+        print("Hi I am ", self.name, ' and I am ', self.age, ' years old.')
+```
+
+* Inheritance --> to avoid copy and pasting, but also be able to quickly create new objects
+
+```python
+class Cat(Dog):
+    def __init__(self, name, age, color)
+    super().__init__(name, age)
+    self.color = color
+    
+myCat = Cat('myCat', 2, 'blue')
+myCat.speak()
+```
+
+* Parent class (`Dog`), & Derived class (`Cat`)
+* `Cat` inherits from `Dog`
+* Derived classes inherit all the functions and methods from their parent class
+* `super().__init__()` = automatically adds self
+  * `self.color` still needed to be added, as that attribute wasn't part of the `Dog` object
+
+
+
+Changing methods in child/derived objects:
+
+```python
+	# Dog object: method/functions
+    >>>...
+    
+    def talk(self):
+        print("Bark!")
+    
+class Cat(Dog):
+    ....
+    def talk(self):
+        print("Meow!")
+        
+myCat = Cat('myCat', 2, 'blue')
+myCat.talk() # "Meow!"
+myDog.talk() # "Bark!"
+```
+
+(Overriding) ^^ 
+
+You can also set values for the attributes/variables in the object:
+
+```python
+class Cat(object): 
+        def __init__(self, name, age, color): # initializes the function/class / def = method /(things you call in the class)
+		self.name = 'name'  # 
+        self.color = 'NoColour'
+```
+
+
+
+```python
+class Vehicle(): # doesn't need the "object" in the brackets on this line
+    def __init__(self, price, gas, color):
+		self.price = price
+        self.gas = gas
+        self.color = color
+        
+	# method
+    def fillUpTank():
+        self.gas = 100 # max fuel/gas in tank
+	def EmptyTank():
+        self.gas = 0
+    def gasLeft():
+        return self.gas
+    
+class Car(Vehicle):
+    def __init__(self, price, gas, color, speed):
+        super().__init__(price, gas, color, speed)
+        self.speed = speed
+        
+    def beep(self):
+        print("Beep meep!')
+              
+class Truck(Vehicle):
+    def __init__(self, price, gas, color, tires):
+        super().__init__(price, gas, color, tires)
+		self.tires = tires
+	
+	def beep(self):
+        print("Loud beep!")
+```
+
+* In this way, new methods/functions can be defined for any type of object (whether child or parent)
+* You can also inherit from a child object
+
