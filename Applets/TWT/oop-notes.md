@@ -255,3 +255,30 @@ class Truck(Vehicle):
 * In this way, new methods/functions can be defined for any type of object (whether child or parent)
 * You can also inherit from a child object
 
+
+
+## Tutorial 4 --> Overloading Methods
+
+https://www.youtube.com/watch?v=39m3rstTN8w
+
+```python
+class Point():
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+        self.coords = (self.x, self.y)
+        
+    def move(self, x, y): # something that may be done in pygame
+        self.x += x
+        self.y += y
+        
+p1 = Point(3, 4)
+p2 = Point(3, 2)
+p3 = Point(1, 3)
+p4 = Point(0, 1)
+```
+
+* This could be something done in pygame, with the `move` method in the `Point` class being done when a key is pressed down (obviously this can be extended further)
+* There could also be points at which there are powerups or enemies (which could also be moved)
+* Box colliders --> when the coords are equal/within a range
+
