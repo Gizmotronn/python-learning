@@ -282,3 +282,58 @@ p4 = Point(0, 1)
 * There could also be points at which there are powerups or enemies (which could also be moved)
 * Box colliders --> when the coords are equal/within a range
 
+**Adding/Mathematical Operators & Points**
+
+```python
+p1 + p2 # crashes, because this functionality has not yet been coded into the class
+```
+
+Adding that method:
+
+```python
+	def __add__(self, p): # point object
+        return Point(self.x + p.x, self.y + p.y)
+```
+
+When we create two point objects:
+
+```python
+p1 = Point(1, 1) # point 1
+p2 = Point(1, 2)
+```
+
+`P2` becomes `p.x` in the method `__add__`, while `P1` becomes `self.x/self.y` in the method
+
+* Grab the coordinates of `P1` & add them to `P2`, return that in a new point object:
+
+```python
+p3 = p1 + p2
+```
+
+* The same works for other mathematical operators:
+
+```python
+	def __sub__(self, p): # subtract points
+    	return Point(self.x - p.x, self.y - p.y)
+    
+    def __mul__(self, p): # multiplication operator
+        return self.x * p.x + self.y * p.y
+```
+
+To return the point in a meaningful way, we need to add one more method:
+
+```python
+	def __str__(self): # called every time we try to convert the point object into a string
+        return "(" + str(self.x) + ',' + str(self.y) + ')'
+```
+
+* If that method doesn't find an `str`, it will return the `address`?
+
+**Comparing two points:**
+
+If we want to see if `p1` (point 1) is greater than (`>=`) `p2`, for example:
+
+```python
+	def
+```
+
