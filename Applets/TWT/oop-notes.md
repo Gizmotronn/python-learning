@@ -334,6 +334,46 @@ To return the point in a meaningful way, we need to add one more method:
 If we want to see if `p1` (point 1) is greater than (`>=`) `p2`, for example:
 
 ```python
-	def
+	def __gt__(self, p): # gt = greater than
+        
+	def __ge__(self, p): # ge = greater than or equal to
+        
+	def __lt__(self, p):
+        
+	def __le__(self, p): # l = less, everything else ==
+        
+    def __eq__(self, p): # equal to // double "=" sign
 ```
 
+We could possibly compare distances (for example, from origin or points)
+
+* True or false
+* In the above snippet, we are comparing the magnitude of the point from the origin
+
+Continuing /^\ below: 
+
+```python
+	def length(self): # length/magnitude ^^
+        import math # imports the maths library
+        return math.sqrt(self.x**2 + self.y**2) # math library --> function --> square root/squared --> exponent/power of 2 **
+```
+
+```python
+	def __gt__(self, p):
+        return self.length() > p.length()
+```
+
+We can then use the other operators like `>=`, `<`, `==` for the other methods defined ^^
+
+For equal to:
+
+```python
+	def __eq__(self, p): 
+        return self.x == p.x and self.y == p.y
+```
+
+```python
+print (p1 == p2)
+```
+
+https://www.youtube.com/watch?v=39m3rstTN8w&t=420s
