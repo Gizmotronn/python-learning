@@ -377,3 +377,57 @@ print (p1 == p2)
 ```
 
 https://www.youtube.com/watch?v=39m3rstTN8w&t=420s
+
+
+
+**A note**
+
+Today when I was doing my tutoring class with [@blackmagicknight](https://github.com/blackmagicknight) I was able to remember all of this and I'm very happy with how I'm progressing! https://github.com/Gizmotronn/python-learning/issues/22#issuecomment-629175253
+
+
+
+## Tutorial 6
+
+**Static and class methods**
+
+Starting with:
+
+```python
+class Dog:
+    dogs = []
+    
+    def __init__(self, name):
+        self.name = name
+        self.dogs.append(self) # append --> The append() method in python adds a single it.... see content below
+        
+    @classmethod
+    def num_dogs(cls): # number of dogs
+        return len(cls.dogs) # returns the length of the class method -- see below
+    
+    @staticmethod
+    def bark(n):
+        # Barks 'n' times
+        for _ in range(n):
+            print("Bark!")
+            
+tim = Dog("Tim") # a dog with the name "Tim"
+jim = Dog("Jim")
+```
+
+* [`Append`](https://towardsdatascience.com/append-in-python-41c37453400)The **append**() method in **python** adds a single item to the existing list. It doesn't return a new list of items but will modify the original list by adding the item to the end of the list
+* [CLS](https://stackoverflow.com/questions/4613000/what-is-the-cls-variable-used-for-in-python-classes)
+
+
+
+**Class variables**
+
+* At the top of the class
+* Write a variable, just *not* inside one of the methods
+* Example: `dogs = []`  
+* To reference a class variable, you have to be *inside of the class* 
+
+Why do we need class variables?
+
+* If you have variables that every object in your class will use
+* For example, having a group/class of `projectiles` (objects) that all have a maximum speed/velocity
+* Just removes the `initialization` process for variables/attributes and methods in classes
