@@ -34,7 +34,7 @@ class player(object): # create a class --> object oriented programming
         self.walkCount = 0 # See end of document to see what it looked like without object oriented
         self.standing = True # standing still
 
-    def draw(self,win): # argument of the window
+    def draw(self, win): # argument of the window
         if self.walkCount + 1 >= 27: # frame rate 
             self.walkCount = 0
 
@@ -47,7 +47,7 @@ class player(object): # create a class --> object oriented programming
                 self.walkCount += 1
         else: 
             if self.right:
-                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
+                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites 
             else: 
                 win.blit(walkLeft[0], (self.x, self.y))
 
