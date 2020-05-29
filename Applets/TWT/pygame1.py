@@ -7,7 +7,7 @@ pygame.display.set_caption("Pygame") # sets the window caption or title
 
 # Loading images/sprites
 # This goes outside the while loop, near the top of the program
-walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')] # list
+walkRight = [pygame.image.load('R1.png'), pygame.image.load('Img/R2.png'), pygame.image.load('Img/R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')] # list
 walkLeft = [pygame.image.load('L1.png'), pygame.image.load('L2.png'), pygame.image.load('L3.png'), pygame.image.load('L4.png'), pygame.image.load('L5.png'), pygame.image.load('L6.png'), pygame.image.load('L7.png'), pygame.image.load('L8.png'), pygame.image.load('L9.png')] # You COULD flip the images, but that's not what's happening here :)
 bg = pygame.image.load('bg.jpg') # background images
 char = pygame.image.load('standing.png') # the character when there is no movement // i.e. he is standing still
@@ -33,6 +33,9 @@ class player(object): # create a class --> object oriented programming
         self.right = False
         self.walkCount = 0 # See end of document to see what it looked like without object oriented
         self.standing = True # standing still
+        self.centrePointX = self.x
+        self.centrePointY = self.y
+        self.rotate = False
 
     def draw(self, win): # argument of the window
         if self.walkCount + 1 >= 27: # frame rate 
@@ -109,6 +112,7 @@ while run == True:
         man.left = True
         man.right = False
         man.standing = False
+        man.rotate = True
     elif keys[pygame.K_RIGHT] and man.x < screenWidth - man.width - man.vel:       
         man.x += man.vel 
         man.right = True # helps identify which direction the player faces in when jumping, and the direction that the projectiles would go
