@@ -1,3 +1,27 @@
+# Practice
+
+## Creating objects
+
+```python
+class Droid(object):
+	def __init__(self, droidName, droidType, colour, affiliation):
+        droidName = self.droidName
+        droidType = self.droidType
+        colour = self.colour
+        affiliation = self.affiliation
+     
+    def speak(): # speak/print to the console // Method
+        print("Hi, my name is ", droidName, " and I am a member of the ", droidType " class of droids.")
+        
+R2D2 = Droid("R2D2", "Astromech", "Blue", "LightSide") 
+BB8 = Droid("BB8", "Astromech", "Orange", "LightSide")        
+```
+
+## Looking at pygame files:
+
+Full file (as of 11.5.2020 on [IrisDroidology/Python-Learning](https://github.com/gizmotronn/python-learning); see the commits):
+
+```python
 import pygame # as pg //#/ Importing the pygame python module into this script
 pygame.init() # Initialises pygame
 
@@ -7,7 +31,7 @@ pygame.display.set_caption("Pygame") # sets the window caption or title
 
 # Loading images/sprites
 # This goes outside the while loop, near the top of the program
-walkRight = [pygame.image.load('R1.png'), pygame.image.load('Img/R2.png'), pygame.image.load('Img/R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')] # list
+walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')] # list
 walkLeft = [pygame.image.load('L1.png'), pygame.image.load('L2.png'), pygame.image.load('L3.png'), pygame.image.load('L4.png'), pygame.image.load('L5.png'), pygame.image.load('L6.png'), pygame.image.load('L7.png'), pygame.image.load('L8.png'), pygame.image.load('L9.png')] # You COULD flip the images, but that's not what's happening here :)
 bg = pygame.image.load('bg.jpg') # background images
 char = pygame.image.load('standing.png') # the character when there is no movement // i.e. he is standing still
@@ -33,11 +57,8 @@ class player(object): # create a class --> object oriented programming
         self.right = False
         self.walkCount = 0 # See end of document to see what it looked like without object oriented
         self.standing = True # standing still
-        self.centrePointX = self.x
-        self.centrePointY = self.y
-        self.rotate = False
 
-    def draw(self, win): # argument of the window
+    def draw(self,win): # argument of the window
         if self.walkCount + 1 >= 27: # frame rate 
             self.walkCount = 0
 
@@ -50,7 +71,7 @@ class player(object): # create a class --> object oriented programming
                 self.walkCount += 1
         else: 
             if self.right:
-                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites 
+                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
             else: 
                 win.blit(walkLeft[0], (self.x, self.y))
 
@@ -112,7 +133,6 @@ while run == True:
         man.left = True
         man.right = False
         man.standing = False
-        man.rotate = True
     elif keys[pygame.K_RIGHT] and man.x < screenWidth - man.width - man.vel:       
         man.x += man.vel 
         man.right = True # helps identify which direction the player faces in when jumping, and the direction that the projectiles would go
@@ -145,3 +165,41 @@ pygame.quit()
 Backups/Commits
 Ep 3/4 Interval: https://github.com/IrisDroidology/python-learning/commit/ef7ceb5c1d8cf08b2520993cf646c43e646523b5
 """
+```
+
+**Player Class Analysis:**
+
+```python
+# Character/Player Attributes
+class player(object): # create a class --> object oriented programming
+    def __init__(self, x, y, width, height): # initializing the object/class with "attributes", or variables in the object/class. /#/ This __init__ is a method
+        self.x = x # x coord of the "self" // player
+        self.y = y
+        self.width = width # Character Attributes --> man = player(self.attribute values) in Main Game Loop
+        self.height = height
+        self.vel = 5
+        self.isJump = False
+        self.jumpCount = 10
+        self.left = False
+        self.right = False
+        self.walkCount = 0 # See end of document to see what it looked like without object oriented
+        self.standing = True # standing still
+
+    def draw(self,win): # argument of the window
+        if self.walkCount + 1 >= 27: # frame rate 
+            self.walkCount = 0
+
+        if not(self.standing): # if the character is not standing still, he will be facing to the left, or to the right, depending on the direction he moved in first. // This is so that the bullets "know" where to go as well as for just aesthetics and neatness
+            if left:
+                win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+                self.walkCount += 1
+            elif right: 
+                win.blit(walkRight[walkCount//3], (self.x,self.y))      # integer remainder
+                self.walkCount += 1
+        else: 
+            if self.right:
+                win.blit(walkRight[0], (self.x, self.y)) # index value for images/sprites
+            else: 
+                win.blit(walkLeft[0], (self.x, self.y))
+```
+
