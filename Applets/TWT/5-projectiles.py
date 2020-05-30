@@ -154,10 +154,10 @@ def redrawGameWindow():
 
 
 
-"""
+""" 
 
 
-
+https://dev.to/search?q=codecombat
 Full script below
 
 
