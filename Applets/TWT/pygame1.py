@@ -54,6 +54,48 @@ class player(object): # create a class --> object oriented programming
             else: 
                 win.blit(walkLeft[0], (self.x, self.y))
 
+class enemy(object):
+	walkRight = [pygame.image.load('R1E.png'), pygame.image.load('R2E.png')] # etc
+	walkLeft = [pygame.image.load('R2E.png')] # etc 
+
+	def __init__(self, x, y, width, height, end):
+	self.x = x
+	self.y = y
+	self.width = width
+	self.height = height
+	self.end = end 
+	self.walkCount = 0
+	self.vel = 3
+	self.path = [self.x, self.end] # where we start, where we end/enemy    
+
+	def draw(self,win):
+		self.move() # every time we draw, we first move and then draw the character/enemy
+		# pass
+		if self.walkCount + 1 >= 33:
+			self.walkCount = 0
+	
+		if vel > 0 # moving right // velocity is positive # / 3
+			win.blit(self,walkRight[self.walkCount //3], (self.x, self.y))
+			walkCount += 1 
+		else:
+			win.blit(self,walkLeft[self.walkCount //3], (self.x, self.y))
+			walkCount += 1        
+
+	def move(self)
+		if self.vel > 0: # move right
+			if self.x + self.vel < self.path[1] + self.vel # if it hasn't moved too far to the right // [1] refers to the tuple/list index value
+				self.x += self.vel
+			else: # change directions	
+				self.vel = self.vel * -1
+				self.walkCount = 0
+		else: # if velocity is negative
+			if self.x - self.vel > self.path[0]:
+				self.x += self.vel # velocity is now negative
+			else:
+				self.vel = self.vel * -1
+				self.walkCount = 0
+		#pass
+    
 # Projectiles/Bullets
 class projectile(object): # object oriented --> projectile object
     def __init__(self,x,y,radius,color,facing):
@@ -70,20 +112,17 @@ class projectile(object): # object oriented --> projectile object
 # Redraw Game Window Function
 """This is so that the screen refreshes (see in the main game loop); without this nothing would happen after the initial blit?"""
 def redrawGameWindow():
-    global walkCount # Global allows it to be seen anywhere
+	win.blit(bg, (0,0))
+	man.draw(win)
+	goblin.draw(win) # draw "goblin" enemy on the window // game window
+	for bullet in bullets:
+		bullet.draw(win)
+	
+	pygame.display.update()
 
-    win.blit(bg, (0,0))  
-
-    man.draw(win)         
-
-    pygame.display.update()   
-
-    for bullet in bullets:
-        bullet.draw(win)
-
-# Main Game loop
-man = player(300, 410, 64, 64) # dimensions --> see class player(object) ^^^^
-bullets = [] # list --> projectiles//
+# main loop
+man = player(200, 410, 64, 64)
+goblin = enemy(100, 410, 64, 64, 450) # starts at x = 100, goes right until x = 450bullets = [] # list --> projectiles//
 run = True
 while run == True:
     clock.tick(27) # FPS Set to 27
