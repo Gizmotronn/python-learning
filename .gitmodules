@@ -1,3 +1,6 @@
 [submodule "games/Manacaster"]
 	path = games/Manacaster
 	url = http://github.com/irisdroidology/manacaster
+[submodule "applets/django-start"]
+	path = applets/django-start
+	url = https://github.com/gizmotronn/django-start
