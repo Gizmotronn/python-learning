@@ -4,6 +4,6 @@
 [submodule "applets/django-start"]
 	path = applets/django-start
 	url = https://github.com/gizmotronn/django-start
-[submodule "applets/pygame"]
-	path = applets/pygame
+[submodule "Applets/Games/Pygame-Starter"]
+	path = Applets/Games/Pygame-Starter
 	url = https://github.com/gizmotronn/pygame-starter
