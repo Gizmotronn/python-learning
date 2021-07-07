@@ -1,4 +1,6 @@
 # python-learning
+
+This branch (IrisDroidology/Python-Learning/Games) is for the game tutorials that I've looked at but haven't yet finished, for example the numerous pong ones
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 This is a repository for me to show my python projects and to improve my knowledge of the popular Python programming languages. There's a series of links to resources, discussion and articles that I write about this process, and you can download all of my projects through this repo
